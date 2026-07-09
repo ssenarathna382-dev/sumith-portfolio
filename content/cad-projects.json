@@ -17,6 +17,12 @@
       "image": "/images/cad1.jpg",
       "description": "3D-printable model design with clean geometry, proper scale, and client-ready CAD deliverables.",
       "software": "SolidWorks, Onshape"
+    },
+    {
+      "title": "Car chassy",
+      "image": "/images/uploads/11.png",
+      "description": "aaaaaaaaaaaaa",
+      "software": "Onshape"
     }
   ]
 }
