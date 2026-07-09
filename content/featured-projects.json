@@ -1,0 +1,26 @@
+{
+  "sectionTitle": "Engineering & Digital Design Projects",
+  "projects": [
+    {
+      "title": "BIM Modelling & Architectural Visualization",
+      "description": "Revit design, BIM modelling, architectural visualization, rendering, and digital documentation projects.",
+      "image": "/images/bim1.jpg",
+      "buttonText": "View BIM Projects",
+      "buttonLink": "bim-projects.html"
+    },
+    {
+      "title": "Structural Analysis & Design",
+      "description": "Structural modelling, ETABS analysis, SAP2000 models, truss analysis, and structural design projects.",
+      "image": "/images/structural1.jpg",
+      "buttonText": "View Structural Projects",
+      "buttonLink": "structural-projects.html"
+    },
+    {
+      "title": "CAD Modelling, Product Design & 3D Printing",
+      "description": "2D drafting, 3D CAD modelling, product design, engineering drawings, and 3D printing projects.",
+      "image": "/images/cad1.jpg",
+      "buttonText": "View CAD Projects",
+      "buttonLink": "cad-projects.html"
+    }
+  ]
+}
