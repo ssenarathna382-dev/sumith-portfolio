@@ -32,6 +32,25 @@ collections:
             widget: "list"
             field: { label: "Paragraph", name: "paragraph", widget: "text" }
 
+      - label: "Skills Section"
+        name: "skills"
+        file: "content/skills.json"
+        format: "json"
+        fields:
+          - { label: "Section Title", name: "sectionTitle", widget: "string" }
+
+          - label: "Skill Categories"
+            name: "categories"
+            widget: "list"
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "Category Title", name: "title", widget: "string" }
+
+              - label: "Skills"
+                name: "skills"
+                widget: "list"
+                field: { label: "Skill", name: "skill", widget: "string" }
+
       - label: "Contact"
         name: "contact"
         file: "content/contact.json"
