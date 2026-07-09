@@ -50,7 +50,37 @@ collections:
                 name: "skills"
                 widget: "list"
                 field: { label: "Skill", name: "skill", widget: "string" }
+      - label: "Research Section"
+        name: "research"
+        file: "content/research.json"
+        format: "json"
+        fields:
+          - { label: "Section Title", name: "sectionTitle", widget: "string" }
+          - { label: "Home Title", name: "homeTitle", widget: "string" }
+          - { label: "Home Image", name: "homeImage", widget: "image", required: false }
+          - { label: "Home Description", name: "homeDescription", widget: "text" }
+          - { label: "Button Text", name: "buttonText", widget: "string" }
 
+          - { label: "Detail Page Title", name: "detailTitle", widget: "string" }
+          - { label: "Detail Subtitle", name: "detailSubtitle", widget: "string" }
+
+          - label: "Detailed Description"
+            name: "detailDescription"
+            widget: "list"
+            field: { label: "Paragraph", name: "paragraph", widget: "text" }
+
+          - { label: "Tools", name: "tools", widget: "string" }
+          - { label: "Research Areas", name: "researchAreas", widget: "string" }
+          - { label: "Future Direction", name: "futureDirection", widget: "text" }
+
+          - label: "Research Images"
+            name: "images"
+            widget: "list"
+            required: false
+            summary: "{{fields.caption}}"
+            fields:
+              - { label: "Image", name: "image", widget: "image" }
+              - { label: "Caption", name: "caption", widget: "string", required: false }
       - label: "Contact"
         name: "contact"
         file: "content/contact.json"
