@@ -169,3 +169,22 @@ collections:
 
               - { label: "Description", name: "description", widget: "text" }
               - { label: "Software", name: "software", widget: "string" }
+              - label: "Featured Projects Section"
+  name: "featured-projects"
+  file: "content/featured-projects.json"
+  fields:
+    - { label: "Section Title", name: "sectionTitle", widget: "string" }
+
+    - label: "Projects"
+      name: "projects"
+      widget: "list"
+      min: 3
+      max: 3
+      fields:
+        - { label: "Project Title", name: "title", widget: "string" }
+        - { label: "Description", name: "description", widget: "text" }
+        - { label: "Project Image", name: "image", widget: "image" }
+        - { label: "Button Text", name: "buttonText", widget: "string" }
+        - { label: "Button Link", name: "buttonLink", widget: "string" }
+
+
