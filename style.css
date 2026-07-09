@@ -1306,3 +1306,34 @@ footer {
         min-height: auto;
     }
 }
+/* =========================
+   CONTACT VISIBILITY FIX
+   Prevent contact section disappearing after refresh
+========================= */
+
+.contact-wrapper,
+.contact-section .contact-wrapper,
+.contact-intro-box,
+.contact-grid,
+.contact-card {
+    opacity: 1 !important;
+    transform: none !important;
+    visibility: visible !important;
+}
+
+.contact-section {
+    min-height: auto;
+    overflow: visible;
+}
+
+.contact-wrapper {
+    align-items: stretch;
+}
+
+.contact-intro-box {
+    height: 100%;
+}
+
+.contact-grid {
+    min-height: 150px;
+}
