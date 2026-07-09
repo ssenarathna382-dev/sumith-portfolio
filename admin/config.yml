@@ -9,7 +9,6 @@ collections:
   - name: "pages"
     label: "Website Content"
     files:
-
       - label: "Home Page"
         name: "home"
         file: "content/home.json"
@@ -30,7 +29,10 @@ collections:
           - label: "Paragraphs"
             name: "paragraphs"
             widget: "list"
-            field: { label: "Paragraph", name: "paragraph", widget: "text" }
+            field:
+              label: "Paragraph"
+              name: "paragraph"
+              widget: "text"
 
       - label: "Skills Section"
         name: "skills"
@@ -38,18 +40,39 @@ collections:
         format: "json"
         fields:
           - { label: "Section Title", name: "sectionTitle", widget: "string" }
-
           - label: "Skill Categories"
             name: "categories"
             widget: "list"
             summary: "{{fields.title}}"
             fields:
               - { label: "Category Title", name: "title", widget: "string" }
-
               - label: "Skills"
                 name: "skills"
                 widget: "list"
-                field: { label: "Skill", name: "skill", widget: "string" }
+                field:
+                  label: "Skill"
+                  name: "skill"
+                  widget: "string"
+
+      - label: "Featured Projects Section"
+        name: "featured_projects"
+        file: "content/featured-projects.json"
+        format: "json"
+        fields:
+          - { label: "Section Title", name: "sectionTitle", widget: "string" }
+          - label: "Projects"
+            name: "projects"
+            widget: "list"
+            min: 3
+            max: 3
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "Project Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+              - { label: "Project Image", name: "image", widget: "image" }
+              - { label: "Button Text", name: "buttonText", widget: "string" }
+              - { label: "Button Link", name: "buttonLink", widget: "string" }
+
       - label: "Research Section"
         name: "research"
         file: "content/research.json"
@@ -60,19 +83,18 @@ collections:
           - { label: "Home Image", name: "homeImage", widget: "image", required: false }
           - { label: "Home Description", name: "homeDescription", widget: "text" }
           - { label: "Button Text", name: "buttonText", widget: "string" }
-
           - { label: "Detail Page Title", name: "detailTitle", widget: "string" }
           - { label: "Detail Subtitle", name: "detailSubtitle", widget: "string" }
-
           - label: "Detailed Description"
             name: "detailDescription"
             widget: "list"
-            field: { label: "Paragraph", name: "paragraph", widget: "text" }
-
+            field:
+              label: "Paragraph"
+              name: "paragraph"
+              widget: "text"
           - { label: "Tools", name: "tools", widget: "string" }
           - { label: "Research Areas", name: "researchAreas", widget: "string" }
           - { label: "Future Direction", name: "futureDirection", widget: "text" }
-
           - label: "Research Images"
             name: "images"
             widget: "list"
@@ -80,8 +102,9 @@ collections:
             summary: "{{fields.caption}}"
             fields:
               - { label: "Image", name: "image", widget: "image" }
+              - { label: "Caption", name: "caption", widget: "string", required: false }
 
-            - label: "Contact"
+      - label: "Contact"
         name: "contact"
         file: "content/contact.json"
         format: "json"
@@ -107,7 +130,6 @@ collections:
             fields:
               - { label: "Title", name: "title", widget: "string" }
               - { label: "Cover Image", name: "image", widget: "image", required: false }
-
               - label: "Project Images"
                 name: "images"
                 widget: "list"
@@ -116,7 +138,6 @@ collections:
                 fields:
                   - { label: "Image", name: "image", widget: "image" }
                   - { label: "Caption", name: "caption", widget: "string", required: false }
-
               - { label: "Description", name: "description", widget: "text" }
               - { label: "Software", name: "software", widget: "string" }
 
@@ -132,7 +153,6 @@ collections:
             fields:
               - { label: "Title", name: "title", widget: "string" }
               - { label: "Cover Image", name: "image", widget: "image", required: false }
-
               - label: "Project Images"
                 name: "images"
                 widget: "list"
@@ -141,7 +161,6 @@ collections:
                 fields:
                   - { label: "Image", name: "image", widget: "image" }
                   - { label: "Caption", name: "caption", widget: "string", required: false }
-
               - { label: "Description", name: "description", widget: "text" }
               - { label: "Software", name: "software", widget: "string" }
 
@@ -157,7 +176,6 @@ collections:
             fields:
               - { label: "Title", name: "title", widget: "string" }
               - { label: "Cover Image", name: "image", widget: "image", required: false }
-
               - label: "Project Images"
                 name: "images"
                 widget: "list"
@@ -166,25 +184,5 @@ collections:
                 fields:
                   - { label: "Image", name: "image", widget: "image" }
                   - { label: "Caption", name: "caption", widget: "string", required: false }
-
               - { label: "Description", name: "description", widget: "text" }
               - { label: "Software", name: "software", widget: "string" }
-              - label: "Featured Projects Section"
-  name: "featured-projects"
-  file: "content/featured-projects.json"
-  fields:
-    - { label: "Section Title", name: "sectionTitle", widget: "string" }
-
-    - label: "Projects"
-      name: "projects"
-      widget: "list"
-      min: 3
-      max: 3
-      fields:
-        - { label: "Project Title", name: "title", widget: "string" }
-        - { label: "Description", name: "description", widget: "text" }
-        - { label: "Project Image", name: "image", widget: "image" }
-        - { label: "Button Text", name: "buttonText", widget: "string" }
-        - { label: "Button Link", name: "buttonLink", widget: "string" }
-
-
