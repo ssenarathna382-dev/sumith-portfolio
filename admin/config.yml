@@ -80,7 +80,8 @@ collections:
             summary: "{{fields.caption}}"
             fields:
               - { label: "Image", name: "image", widget: "image" }
-      - label: "Contact"
+
+            - label: "Contact"
         name: "contact"
         file: "content/contact.json"
         format: "json"
