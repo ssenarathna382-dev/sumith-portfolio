@@ -1,0 +1,55 @@
+{
+  "activities": [
+    {
+      "title": "aa",
+      "date": "aa",
+      "category": "aaa",
+      "location": "aaa",
+      "coverImage": "/images/uploads/cad1.jpg",
+      "images": [
+        {
+          "image": "/images/uploads/image7.png"
+        }
+      ]
+    },
+    {
+      "title": "asas",
+      "date": "sa",
+      "category": "as",
+      "description": "asas",
+      "images": [
+        {
+          "image": "/images/uploads/noise-contour-lines-in-combination-with-3d-city-model.png"
+        }
+      ],
+      "coverImage": "/images/uploads/11.png"
+    },
+    {
+      "title": "as",
+      "category": "as",
+      "date": "as",
+      "location": "sa",
+      "description": "as",
+      "images": [
+        {
+          "image": "/images/uploads/image6.png"
+        }
+      ]
+    },
+    {
+      "title": "as",
+      "category": "s",
+      "date": "as",
+      "location": "as",
+      "coverImage": "/images/uploads/whatsapp-image-2026-01-12-at-11.49.52-am.jpeg",
+      "images": [
+        {
+          "image": "/images/uploads/123.png"
+        }
+      ]
+    }
+  ],
+  "sectionTitle": "AAA",
+  "sectionDescription": "AAA",
+  "buttonText": "AAAAA"
+}
