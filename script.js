@@ -463,9 +463,9 @@ async function loadProjectCategory(jsonPath) {
 ========================= */
 
 function initAnimations() {
-    const animatedItems = document.querySelectorAll(
-        ".hero-left, .hero-right, .hero-stats, .card, .project-card, .research-card-home, .experience-box, .research-box, .detail-project-card, .research-detail-layout, .contact-wrapper"
-    );
+   const animatedItems = document.querySelectorAll(
+    ".hero-left, .hero-right, .hero-stats, .card, .project-card, .research-card-home, .experience-box, .research-box, .detail-project-card, .research-detail-layout"
+);
 
     animatedItems.forEach(item => {
         item.style.opacity = "0";
