@@ -1,6 +1,12 @@
 {
   "projects": [
     {
+      "title": "Mahara ",
+      "image": "/images/uploads/image7.png",
+      "description": "ss",
+      "software": "Revit/TwinMotion"
+    },
+    {
       "title": "Residential Building BIM Model",
       "image": "/images/bim1.jpg",
       "description": "Revit-based architectural and structural BIM model with drawings, sections, schedules, and 3D visualization.",
@@ -17,12 +23,6 @@
       "image": "/images/bim1.jpg",
       "description": "BIM-based construction documentation including plans, elevations, sections, details, and quantity-related outputs.",
       "software": "Revit, AutoCAD"
-    },
-    {
-      "title": "Mahara ",
-      "image": "/images/uploads/image7.png",
-      "description": "ss",
-      "software": "Revit/TwinMotion"
     }
   ]
 }
