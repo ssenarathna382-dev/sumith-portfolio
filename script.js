@@ -45,8 +45,6 @@ async function loadHomeContent() {
         setText(".hero-description", home.description);
     }
 
-    /* About section */
-
     const about = await loadJSON("/content/about.json");
 
     if (about && Array.isArray(about.paragraphs)) {
@@ -67,8 +65,6 @@ async function loadHomeContent() {
             });
         }
     }
-
-    /* Skills section */
 
     const skills = await loadJSON("/content/skills.json");
 
@@ -105,7 +101,7 @@ async function loadHomeContent() {
         }
     }
 
-    /* Contact section */
+    await loadResearchHomeCard();
 
     const contact = await loadJSON("/content/contact.json");
 
@@ -139,8 +135,143 @@ async function loadHomeContent() {
 }
 
 /* =========================
+   RESEARCH HOME CARD
+========================= */
+
+async function loadResearchHomeCard() {
+    const research = await loadJSON("/content/research.json");
+
+    if (!research) return;
+
+    const researchSection = document.querySelector("#research");
+
+    if (!researchSection) return;
+
+    const heading = researchSection.querySelector("h2");
+    const cardImage = researchSection.querySelector(".research-card-image img");
+    const cardTitle = researchSection.querySelector(".research-card-content h3");
+    const cardDescription = researchSection.querySelector(".research-card-content p");
+    const cardButton = researchSection.querySelector(".research-view-btn");
+
+    if (heading && research.sectionTitle) {
+        heading.textContent = research.sectionTitle;
+    }
+
+    if (cardImage && research.homeImage) {
+        cardImage.src = research.homeImage;
+        cardImage.alt = research.homeTitle || "Research Project";
+    }
+
+    if (cardTitle && research.homeTitle) {
+        cardTitle.textContent = research.homeTitle;
+    }
+
+    if (cardDescription && research.homeDescription) {
+        cardDescription.textContent = research.homeDescription;
+    }
+
+    if (cardButton && research.buttonText) {
+        cardButton.textContent = `${research.buttonText} →`;
+        cardButton.href = "/research-project.html";
+    }
+}
+
+/* =========================
+   RESEARCH DETAIL PAGE
+========================= */
+
+async function loadResearchDetailPage() {
+    const research = await loadJSON("/content/research.json");
+
+    if (!research) return;
+
+    setText(".research-detail-title", research.detailTitle);
+    setText(".research-detail-subtitle", research.detailSubtitle);
+
+    const descriptionBox = document.querySelector(".research-description");
+
+    if (descriptionBox && Array.isArray(research.detailDescription)) {
+        descriptionBox.innerHTML = "";
+
+        research.detailDescription.forEach(paragraph => {
+            const p = document.createElement("p");
+            p.textContent = paragraph;
+            descriptionBox.appendChild(p);
+        });
+    }
+
+    const infoBox = document.querySelector(".research-info-box");
+
+    if (infoBox) {
+        infoBox.innerHTML = `
+            <p><strong>Tools:</strong> ${research.tools || ""}</p>
+            <p><strong>Research Areas:</strong> ${research.researchAreas || ""}</p>
+            <p><strong>Future Direction:</strong> ${research.futureDirection || ""}</p>
+        `;
+    }
+
+    const gallery = document.querySelector(".research-detail-gallery .project-gallery");
+
+    if (gallery) {
+        let images = [];
+
+        if (Array.isArray(research.images) && research.images.length > 0) {
+            images = research.images
+                .filter(item => item && item.image)
+                .map(item => ({
+                    image: item.image,
+                    caption: item.caption || research.detailTitle || "Research image"
+                }));
+        }
+
+        if (images.length === 0 && research.homeImage) {
+            images = [
+                {
+                    image: research.homeImage,
+                    caption: research.detailTitle || "Research image"
+                }
+            ];
+        }
+
+        if (images.length > 0) {
+            const firstImage = images[0].image;
+
+            const thumbs = images.map((item, index) => `
+                <img
+                    src="${item.image}"
+                    alt="${item.caption}"
+                    class="project-thumb ${index === 0 ? "active" : ""}"
+                    data-src="${item.image}"
+                >
+            `).join("");
+
+            gallery.innerHTML = `
+                <img src="${firstImage}" alt="${research.detailTitle}" class="project-main-img">
+
+                ${
+                    images.length > 1
+                    ? `<div class="project-thumbs">${thumbs}</div>`
+                    : ""
+                }
+            `;
+
+            const mainImg = gallery.querySelector(".project-main-img");
+            const thumbImgs = gallery.querySelectorAll(".project-thumb");
+
+            thumbImgs.forEach(thumb => {
+                thumb.addEventListener("click", () => {
+                    mainImg.src = thumb.dataset.src;
+
+                    thumbImgs.forEach(t => t.classList.remove("active"));
+                    thumb.classList.add("active");
+                });
+            });
+        }
+    }
+}
+
+/* =========================
    PROJECT CATEGORY PAGES
-   WITH MULTIPLE IMAGE GALLERY
 ========================= */
 
 async function loadProjectCategory(jsonPath) {
@@ -259,7 +390,7 @@ async function loadProjectCategory(jsonPath) {
 
 function initAnimations() {
     const animatedItems = document.querySelectorAll(
-        ".hero-left, .hero-right, .hero-stats, .card, .project-card, .experience-box, .research-box, .detail-project-card"
+        ".hero-left, .hero-right, .hero-stats, .card, .project-card, .research-card-home, .experience-box, .research-box, .detail-project-card, .research-detail-layout"
     );
 
     animatedItems.forEach(item => {
@@ -287,9 +418,6 @@ function initAnimations() {
 
 /* =========================
    PAGE DETECTION
-   Supports:
-   /bim-projects.html
-   /bim-projects
 ========================= */
 
 document.addEventListener("DOMContentLoaded", async () => {
@@ -312,6 +440,12 @@ document.addEventListener("DOMContentLoaded", async () => {
         currentPage.endsWith("/cad-projects")
     ) {
         await loadProjectCategory("/content/cad-projects.json");
+
+    } else if (
+        currentPage.includes("research-project.html") ||
+        currentPage.endsWith("/research-project")
+    ) {
+        await loadResearchDetailPage();
 
     } else {
         await loadHomeContent();
