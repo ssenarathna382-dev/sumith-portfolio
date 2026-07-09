@@ -1,0 +1,22 @@
+{
+  "projects": [
+    {
+      "title": "ETABS Building Analysis",
+      "image": "/images/structural1.jpg",
+      "description": "Structural modelling and analysis of building frame systems using ETABS for gravity and lateral load assessment.",
+      "software": "ETABS"
+    },
+    {
+      "title": "SAP2000 Truss / Bridge Analysis",
+      "image": "/images/structural1.jpg",
+      "description": "Truss and bridge-type structural analysis using SAP2000, including member force evaluation and structural behaviour study.",
+      "software": "SAP2000"
+    },
+    {
+      "title": "Structural Design Project",
+      "image": "/images/structural1.jpg",
+      "description": "Structural design and analysis work involving beams, columns, frames, trusses, and engineering design documentation.",
+      "software": "ETABS, SAP2000, AutoCAD"
+    }
+  ]
+}

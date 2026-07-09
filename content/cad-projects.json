@@ -1,0 +1,22 @@
+{
+  "projects": [
+    {
+      "title": "3D CAD Modelling Project",
+      "image": "/images/cad1.jpg",
+      "description": "3D CAD model development for product components, mechanical parts, and client-based freelance design work.",
+      "software": "SolidWorks, Onshape, AutoCAD"
+    },
+    {
+      "title": "2D Engineering Drawing Project",
+      "image": "/images/cad1.jpg",
+      "description": "Technical drawing preparation including dimensions, annotations, manufacturing details, and engineering documentation.",
+      "software": "AutoCAD, SolidWorks"
+    },
+    {
+      "title": "3D Printing Model Development",
+      "image": "/images/cad1.jpg",
+      "description": "3D-printable model design with clean geometry, proper scale, and client-ready CAD deliverables.",
+      "software": "SolidWorks, Onshape"
+    }
+  ]
+}

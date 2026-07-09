@@ -1,0 +1,90 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "pages"
+    label: "Website Content"
+    files:
+
+      - label: "Home Page"
+        name: "home"
+        file: "content/home.json"
+        format: "json"
+        fields:
+          - { label: "Hello Text", name: "hello", widget: "string" }
+          - { label: "First Name", name: "firstName", widget: "string" }
+          - { label: "Last Name", name: "lastName", widget: "string" }
+          - { label: "Main Role", name: "roleMain", widget: "string" }
+          - { label: "Role Accent", name: "roleAccent", widget: "string" }
+          - { label: "Description", name: "description", widget: "text" }
+
+      - label: "About Page"
+        name: "about"
+        file: "content/about.json"
+        format: "json"
+        fields:
+          - label: "Paragraphs"
+            name: "paragraphs"
+            widget: "list"
+            field: { label: "Paragraph", name: "paragraph", widget: "text" }
+
+      - label: "Contact"
+        name: "contact"
+        file: "content/contact.json"
+        format: "json"
+        fields:
+          - { label: "Email", name: "email", widget: "string" }
+          - { label: "LinkedIn URL", name: "linkedinUrl", widget: "string" }
+          - { label: "LinkedIn Text", name: "linkedinText", widget: "string" }
+          - { label: "Fiverr URL", name: "fiverrUrl", widget: "string" }
+          - { label: "Fiverr Text", name: "fiverrText", widget: "string" }
+          - { label: "Location", name: "location", widget: "string" }
+
+      - label: "BIM Projects"
+        name: "bim_projects"
+        file: "content/bim-projects.json"
+        format: "json"
+        fields:
+          - label: "Projects"
+            name: "projects"
+            widget: "list"
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Image", name: "image", widget: "image" }
+              - { label: "Description", name: "description", widget: "text" }
+              - { label: "Software", name: "software", widget: "string" }
+
+      - label: "Structural Projects"
+        name: "structural_projects"
+        file: "content/structural-projects.json"
+        format: "json"
+        fields:
+          - label: "Projects"
+            name: "projects"
+            widget: "list"
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Image", name: "image", widget: "image" }
+              - { label: "Description", name: "description", widget: "text" }
+              - { label: "Software", name: "software", widget: "string" }
+
+      - label: "CAD Projects"
+        name: "cad_projects"
+        file: "content/cad-projects.json"
+        format: "json"
+        fields:
+          - label: "Projects"
+            name: "projects"
+            widget: "list"
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Image", name: "image", widget: "image" }
+              - { label: "Description", name: "description", widget: "text" }
+              - { label: "Software", name: "software", widget: "string" }
