@@ -1337,3 +1337,58 @@ footer {
 .contact-grid {
     min-height: 150px;
 }
+/* =========================
+   MOBILE HERO PHOTO FIX
+   Move profile photo slightly down on phone
+========================= */
+
+@media (max-width: 768px) {
+    .hero-right {
+        height: 455px !important;
+        min-height: 455px !important;
+        overflow: hidden !important;
+    }
+
+    .hero-photo {
+        height: 455px !important;
+        bottom: -32px !important;
+        left: 50% !important;
+        transform: translateX(-50%) scale(1.00) !important;
+    }
+
+    .blue-circle {
+        width: 300px !important;
+        height: 300px !important;
+        bottom: 48px !important;
+    }
+
+    .circle-ring {
+        width: 380px !important;
+        height: 380px !important;
+        bottom: 18px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-right {
+        height: 430px !important;
+        min-height: 430px !important;
+    }
+
+    .hero-photo {
+        height: 430px !important;
+        bottom: -28px !important;
+    }
+
+    .blue-circle {
+        width: 280px !important;
+        height: 280px !important;
+        bottom: 45px !important;
+    }
+
+    .circle-ring {
+        width: 350px !important;
+        height: 350px !important;
+        bottom: 15px !important;
+    }
+}
