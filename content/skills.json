@@ -1,0 +1,36 @@
+{
+  "sectionTitle": "Technical Skills",
+  "categories": [
+    {
+      "title": "BIM & CAD",
+      "skills": [
+        "Revit",
+        "AutoCAD",
+        "Civil 3D",
+        "3ds Max",
+        "SolidWorks",
+        "Onshape"
+      ]
+    },
+    {
+      "title": "Engineering & Analysis",
+      "skills": [
+        "ETABS",
+        "SAP2000",
+        "Structural Analysis",
+        "Structural Design",
+        "Surveying"
+      ]
+    },
+    {
+      "title": "Digital Technologies",
+      "skills": [
+        "ArcGIS",
+        "QGIS",
+        "Machine Learning Basics",
+        "MS Project",
+        "MS Office"
+      ]
+    }
+  ]
+}
