@@ -1,130 +1,9 @@
-/* =========================
-   FINAL CONTACT SECTION
-   Remove left "Let's Work Together" box
-========================= */
-
-.contact-left,
-.contact-intro-box {
-    display: none !important;
+bottom: 15px !important;
 }
-
-.contact-wrapper-only {
-    grid-template-columns: 1fr !important;
-    max-width: 1050px !important;
-    width: 88% !important;
-    margin: 0 auto !important;
 }
-
-.contact-right-full {
-    width: 100% !important;
-}
-
-.contact-wrapper-only .contact-grid {
-    display: grid !important;
-    grid-template-columns: repeat(2, 1fr) !important;
-    gap: 22px !important;
-    max-width: 1050px !important;
-    margin: 0 auto !important;
-    opacity: 1 !important;
-    transform: none !important;
-    visibility: visible !important;
-}
-
-.contact-wrapper-only .location-card {
-    grid-column: span 2;
-}
-
-.contact-section,
-.contact-wrapper-only,
-.contact-right-full,
-.contact-grid,
-.contact-card {
-    opacity: 1 !important;
-    transform: none !important;
-    visibility: visible !important;
-}
-
-.contact-section {
-    background: #f1f5f9 !important;
-    padding-top: 90px !important;
-    padding-bottom: 90px !important;
-    overflow: visible !important;
-}
-
-.contact-card {
-    background: #ffffff;
-    border-radius: 18px;
-    padding: 24px 22px;
-    display: flex;
-    align-items: flex-start;
-    gap: 18px;
-    text-decoration: none;
-    color: inherit;
-    box-shadow: 0 10px 26px rgba(15, 23, 42, 0.08);
-    transition: 0.3s ease;
-    border: 1px solid rgba(148, 163, 184, 0.18);
-    min-height: 150px;
-}
-
-.contact-card:hover {
-    transform: translateY(-7px) !important;
-    box-shadow: 0 18px 40px rgba(15, 23, 42, 0.14);
-    border-color: rgba(37, 99, 235, 0.22);
-}
-
-.contact-icon {
-    width: 58px;
-    height: 58px;
-    min-width: 58px;
-    border-radius: 16px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(135deg, #0ea5e9, #2563eb);
-    color: #ffffff;
-    font-size: 22px;
-    box-shadow: 0 10px 24px rgba(37, 99, 235, 0.22);
-}
-
-.whatsapp-icon {
-    background: linear-gradient(135deg, #22c55e, #16a34a);
-    box-shadow: 0 10px 24px rgba(34, 197, 94, 0.25);
-}
-
-.contact-details {
-    flex: 1;
-}
-
-.contact-label {
-    display: inline-block;
-    font-size: 13px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    color: #3b82f6;
-    margin-bottom: 8px;
-}
-
-.whatsapp-contact-card .contact-label {
-    color: #16a34a;
-}
-
-.contact-details h4 {
-    font-size: 20px;
-    line-height: 1.45;
-    color: #0f172a;
-    margin-bottom: 10px;
-    word-break: break-word;
-}
-
-.contact-details p {
-    color: #475569;
-    line-height: 1.7;
-    font-size: 15px;
-}
-
 /* =========================
    FEATURED PROJECTS CMS FIX
+   Home page project cards loaded from featured-projects.json
 ========================= */
 
 #featured-projects-title {
@@ -150,8 +29,35 @@
     display: block;
 }
 
+/* Make project card height clean and balanced */
+#featured-projects-grid .project-card {
+    min-height: 100%;
+}
+
+#featured-projects-grid .project-card h3 {
+    padding: 22px 22px 10px;
+    color: #0369a1;
+    font-size: 21px;
+    line-height: 1.35;
+}
+
+#featured-projects-grid .project-card p {
+    padding: 0 22px 24px;
+    font-size: 15.5px;
+    line-height: 1.65;
+}
+
+#featured-projects-grid .view-more {
+    display: inline-block;
+    margin: 0 22px 25px;
+    color: #0d6efd;
+    font-weight: 700;
+    font-size: 14px;
+}
+
 /* =========================
    HERO STAT TEXT FIX
+   Digital Construction card
 ========================= */
 
 .stat-content h3 {
@@ -163,7 +69,40 @@
 }
 
 /* =========================
+   CONTACT VISIBILITY FIX
+   Prevent contact section disappearing after refresh
+========================= */
+
+.contact-section,
+.contact-wrapper,
+.contact-intro-box,
+.contact-grid,
+.contact-card {
+    opacity: 1 !important;
+    transform: none !important;
+    visibility: visible !important;
+}
+
+.contact-section {
+    min-height: auto !important;
+    overflow: visible !important;
+}
+
+.contact-wrapper {
+    align-items: stretch !important;
+}
+
+.contact-intro-box {
+    height: 100%;
+}
+
+.contact-grid {
+    min-height: 150px;
+}
+
+/* =========================
    MOBILE HERO PHOTO FIX
+   Move profile photo slightly down on phone
 ========================= */
 
 @media (max-width: 768px) {
@@ -199,14 +138,6 @@
     .stat-content p {
         font-size: 11px !important;
     }
-
-    .contact-wrapper-only .contact-grid {
-        grid-template-columns: 1fr !important;
-    }
-
-    .contact-wrapper-only .location-card {
-        grid-column: span 1;
-    }
 }
 
 @media (max-width: 480px) {
@@ -231,7 +162,13 @@
         height: 350px !important;
         bottom: 15px !important;
     }
+}
 
+/* =========================
+   MOBILE PROJECT CARDS
+========================= */
+
+@media (max-width: 768px) {
     #featured-projects-grid .project-img {
         height: 220px;
     }
