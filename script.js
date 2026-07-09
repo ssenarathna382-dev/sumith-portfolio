@@ -22,37 +22,39 @@ function setText(selector, value) {
     }
 }
 
-/* Home page content */
+/* Home page editable content */
 
 async function loadHomeContent() {
-    const home = await loadJSON("/content/home.json");
+    const home = await loadJSON("content/home.json");
 
     if (home) {
         setText(".hello-text", home.hello);
 
         const nameElement = document.querySelector(".hero-name");
-        if (nameElement) {
+        if (nameElement && home.firstName && home.lastName) {
             nameElement.innerHTML = `${home.firstName}<br><span>${home.lastName}</span>`;
         }
 
         const roleElement = document.querySelector(".hero-role");
-        if (roleElement) {
+        if (roleElement && home.roleMain && home.roleAccent) {
             roleElement.innerHTML = `${home.roleMain} <span>${home.roleAccent}</span>`;
         }
 
         setText(".hero-description", home.description);
     }
 
-    const about = await loadJSON("/content/about.json");
+    const about = await loadJSON("content/about.json");
 
-    if (about && about.paragraphs) {
+    if (about && Array.isArray(about.paragraphs)) {
         const aboutSection = document.querySelector("#about");
 
         if (aboutSection) {
             const heading = aboutSection.querySelector("h2");
-
             aboutSection.innerHTML = "";
-            if (heading) aboutSection.appendChild(heading);
+
+            if (heading) {
+                aboutSection.appendChild(heading);
+            }
 
             about.paragraphs.forEach(text => {
                 const paragraph = document.createElement("p");
@@ -62,7 +64,7 @@ async function loadHomeContent() {
         }
     }
 
-    const contact = await loadJSON("/content/contact.json");
+    const contact = await loadJSON("content/contact.json");
 
     if (contact) {
         const contactSection = document.querySelector("#contact");
@@ -93,15 +95,27 @@ async function loadHomeContent() {
     }
 }
 
-/* Project category pages */
+/* Project category pages editable content */
 
 async function loadProjectCategory(jsonPath) {
+    const grid = document.querySelector(".detail-project-grid");
+
+    if (!grid) {
+        return;
+    }
+
     const data = await loadJSON(jsonPath);
 
-    if (!data || !data.projects) return;
+    /*
+      Important:
+      JSON load නොවුණොත් grid එක clear කරන්නේ නෑ.
+      ඒ නිසා old static projects පේනවා.
+    */
 
-    const grid = document.querySelector(".detail-project-grid");
-    if (!grid) return;
+    if (!data || !Array.isArray(data.projects) || data.projects.length === 0) {
+        console.warn("No project data found. Keeping static fallback cards.");
+        return;
+    }
 
     grid.innerHTML = "";
 
@@ -151,7 +165,6 @@ function initAnimations() {
     }
 
     window.addEventListener("scroll", revealItems);
-    window.addEventListener("load", revealItems);
     revealItems();
 }
 
@@ -161,11 +174,11 @@ document.addEventListener("DOMContentLoaded", async () => {
     const currentPage = window.location.pathname;
 
     if (currentPage.includes("bim-projects.html")) {
-        await loadProjectCategory("/content/bim-projects.json");
+        await loadProjectCategory("content/bim-projects.json");
     } else if (currentPage.includes("structural-projects.html")) {
-        await loadProjectCategory("/content/structural-projects.json");
+        await loadProjectCategory("content/structural-projects.json");
     } else if (currentPage.includes("cad-projects.html")) {
-        await loadProjectCategory("/content/cad-projects.json");
+        await loadProjectCategory("content/cad-projects.json");
     } else {
         await loadHomeContent();
     }
