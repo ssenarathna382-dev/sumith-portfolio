@@ -80,13 +80,14 @@ collections:
             summary: "{{fields.caption}}"
             fields:
               - { label: "Image", name: "image", widget: "image" }
-              - { label: "Caption", name: "caption", widget: "string", required: false }
       - label: "Contact"
         name: "contact"
         file: "content/contact.json"
         format: "json"
         fields:
           - { label: "Email", name: "email", widget: "string" }
+          - { label: "Phone Number", name: "phoneNumber", widget: "string" }
+          - { label: "WhatsApp Message", name: "whatsappMessage", widget: "text", required: false }
           - { label: "LinkedIn URL", name: "linkedinUrl", widget: "string" }
           - { label: "LinkedIn Text", name: "linkedinText", widget: "string" }
           - { label: "Fiverr URL", name: "fiverrUrl", widget: "string" }
