@@ -55,7 +55,17 @@ collections:
             summary: "{{fields.title}}"
             fields:
               - { label: "Title", name: "title", widget: "string" }
-              - { label: "Image", name: "image", widget: "image" }
+              - { label: "Cover Image", name: "image", widget: "image", required: false }
+
+              - label: "Project Images"
+                name: "images"
+                widget: "list"
+                required: false
+                summary: "{{fields.caption}}"
+                fields:
+                  - { label: "Image", name: "image", widget: "image" }
+                  - { label: "Caption", name: "caption", widget: "string", required: false }
+
               - { label: "Description", name: "description", widget: "text" }
               - { label: "Software", name: "software", widget: "string" }
 
@@ -70,7 +80,17 @@ collections:
             summary: "{{fields.title}}"
             fields:
               - { label: "Title", name: "title", widget: "string" }
-              - { label: "Image", name: "image", widget: "image" }
+              - { label: "Cover Image", name: "image", widget: "image", required: false }
+
+              - label: "Project Images"
+                name: "images"
+                widget: "list"
+                required: false
+                summary: "{{fields.caption}}"
+                fields:
+                  - { label: "Image", name: "image", widget: "image" }
+                  - { label: "Caption", name: "caption", widget: "string", required: false }
+
               - { label: "Description", name: "description", widget: "text" }
               - { label: "Software", name: "software", widget: "string" }
 
@@ -85,6 +105,16 @@ collections:
             summary: "{{fields.title}}"
             fields:
               - { label: "Title", name: "title", widget: "string" }
-              - { label: "Image", name: "image", widget: "image" }
+              - { label: "Cover Image", name: "image", widget: "image", required: false }
+
+              - label: "Project Images"
+                name: "images"
+                widget: "list"
+                required: false
+                summary: "{{fields.caption}}"
+                fields:
+                  - { label: "Image", name: "image", widget: "image" }
+                  - { label: "Caption", name: "caption", widget: "string", required: false }
+
               - { label: "Description", name: "description", widget: "text" }
               - { label: "Software", name: "software", widget: "string" }
