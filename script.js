@@ -118,7 +118,7 @@ async function loadContactContent() {
                 <div class="contact-details">
                     <span class="contact-label">Location</span>
                     <h4>${contact.location || ""}</h4>
-                    <p>Based in Sri Lanka</p>
+                   
                 </div>
             </div>
         `;
