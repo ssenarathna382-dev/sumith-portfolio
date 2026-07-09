@@ -3,7 +3,7 @@ async function loadJSON(path) {
         const response = await fetch(path, { cache: "no-store" });
 
         if (!response.ok) {
-            console.warn("Could not load:", path);
+            console.warn("Could not load:", path, response.status);
             return null;
         }
 
@@ -25,7 +25,7 @@ function setText(selector, value) {
 /* Home page editable content */
 
 async function loadHomeContent() {
-    const home = await loadJSON("content/home.json");
+    const home = await loadJSON("/content/home.json");
 
     if (home) {
         setText(".hello-text", home.hello);
@@ -43,7 +43,7 @@ async function loadHomeContent() {
         setText(".hero-description", home.description);
     }
 
-    const about = await loadJSON("content/about.json");
+    const about = await loadJSON("/content/about.json");
 
     if (about && Array.isArray(about.paragraphs)) {
         const aboutSection = document.querySelector("#about");
@@ -64,7 +64,7 @@ async function loadHomeContent() {
         }
     }
 
-    const contact = await loadJSON("content/contact.json");
+    const contact = await loadJSON("/content/contact.json");
 
     if (contact) {
         const contactSection = document.querySelector("#contact");
@@ -101,37 +101,44 @@ async function loadProjectCategory(jsonPath) {
     const grid = document.querySelector(".detail-project-grid");
 
     if (!grid) {
+        console.warn("Project grid not found");
         return;
     }
 
     const data = await loadJSON(jsonPath);
 
-    /*
-      Important:
-      JSON load නොවුණොත් grid එක clear කරන්නේ නෑ.
-      ඒ නිසා old static projects පේනවා.
-    */
+    if (!data) {
+        console.warn("JSON file not loaded. Keeping fallback projects.");
+        return;
+    }
 
-    if (!data || !Array.isArray(data.projects) || data.projects.length === 0) {
-        console.warn("No project data found. Keeping static fallback cards.");
+    const projects = data.projects || data.items;
+
+    if (!Array.isArray(projects) || projects.length === 0) {
+        console.warn("No projects found in JSON. Keeping fallback projects.");
         return;
     }
 
     grid.innerHTML = "";
 
-    data.projects.forEach(project => {
+    projects.forEach(project => {
+        const title = project.title || "Untitled Project";
+        const image = project.image || "/images/bim1.jpg";
+        const description = project.description || "";
+        const software = project.software || "Not specified";
+
         const card = document.createElement("div");
         card.className = "detail-project-card";
 
         card.innerHTML = `
-            <img src="${project.image}" alt="${project.title}">
+            <img src="${image}" alt="${title}">
 
             <div class="detail-content">
-                <h3>${project.title}</h3>
+                <h3>${title}</h3>
 
-                <p>${project.description}</p>
+                <p>${description}</p>
 
-                <p><strong>Software:</strong> ${project.software}</p>
+                <p><strong>Software:</strong> ${software}</p>
             </div>
         `;
 
@@ -165,20 +172,33 @@ function initAnimations() {
     }
 
     window.addEventListener("scroll", revealItems);
+    window.addEventListener("load", revealItems);
     revealItems();
 }
 
-/* Detect current page */
+/* Detect current page - supports both .html and Netlify pretty URLs */
 
 document.addEventListener("DOMContentLoaded", async () => {
-    const currentPage = window.location.pathname;
+    const currentPage = window.location.pathname.replace(/\/$/, "");
 
-    if (currentPage.includes("bim-projects.html")) {
-        await loadProjectCategory("content/bim-projects.json");
-    } else if (currentPage.includes("structural-projects.html")) {
-        await loadProjectCategory("content/structural-projects.json");
-    } else if (currentPage.includes("cad-projects.html")) {
-        await loadProjectCategory("content/cad-projects.json");
+    if (
+        currentPage.includes("bim-projects.html") ||
+        currentPage.endsWith("/bim-projects")
+    ) {
+        await loadProjectCategory("/content/bim-projects.json");
+
+    } else if (
+        currentPage.includes("structural-projects.html") ||
+        currentPage.endsWith("/structural-projects")
+    ) {
+        await loadProjectCategory("/content/structural-projects.json");
+
+    } else if (
+        currentPage.includes("cad-projects.html") ||
+        currentPage.endsWith("/cad-projects")
+    ) {
+        await loadProjectCategory("/content/cad-projects.json");
+
     } else {
         await loadHomeContent();
     }
