@@ -10,7 +10,8 @@
         {
           "image": "/images/uploads/image7.png"
         }
-      ]
+      ],
+      "description": "yj"
     },
     {
       "title": "asas",
@@ -46,10 +47,11 @@
         {
           "image": "/images/uploads/123.png"
         }
-      ]
+      ],
+      "description": "ghjghj"
     }
   ],
-  "sectionTitle": "AAA",
-  "sectionDescription": "AAA",
-  "buttonText": "AAAAA"
+  "sectionTitle": "Achievements & Activities",
+  "sectionDescription": "A collection of events, competitions, workshops, academic activities, and professional engagements I have participated in.",
+  "buttonText": "View All Activities"
 }
