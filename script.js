@@ -126,6 +126,79 @@ async function loadContactContent() {
 }
 
 /* =========================
+   FEATURED HOME PROJECTS
+   Home page 3 project cards editable by CMS
+========================= */
+
+function normalizePageLink(link) {
+    if (!link) return "#";
+
+    if (
+        link.startsWith("http://") ||
+        link.startsWith("https://") ||
+        link.startsWith("/") ||
+        link.startsWith("#")
+    ) {
+        return link;
+    }
+
+    return `/${link}`;
+}
+
+async function loadFeaturedProjects() {
+    const data = await loadJSON("/content/featured-projects.json");
+
+    if (!data) {
+        console.warn("Featured projects JSON not loaded. Keeping fallback cards.");
+        return;
+    }
+
+    const titleElement = document.querySelector("#featured-projects-title");
+    const gridElement = document.querySelector("#featured-projects-grid");
+
+    if (!gridElement) return;
+
+    if (titleElement && data.sectionTitle) {
+        titleElement.textContent = data.sectionTitle;
+    }
+
+    const projects = data.projects;
+
+    if (!Array.isArray(projects) || projects.length === 0) {
+        console.warn("No featured projects found. Keeping fallback cards.");
+        return;
+    }
+
+    gridElement.innerHTML = "";
+
+    projects.forEach(project => {
+        const title = project.title || "Project";
+        const description = project.description || "";
+        const image = project.image || "/images/bim1.jpg";
+        const buttonText = project.buttonText || "View Project";
+        const buttonLink = normalizePageLink(project.buttonLink || "#");
+
+        const card = document.createElement("a");
+        card.href = buttonLink;
+        card.className = "project-card project-card-link";
+
+        card.innerHTML = `
+            <div class="project-img">
+                <img src="${image}" alt="${title}">
+            </div>
+
+            <h3>${title}</h3>
+
+            <p>${description}</p>
+
+            <span class="view-more">${buttonText} →</span>
+        `;
+
+        gridElement.appendChild(card);
+    });
+}
+
+/* =========================
    HOME PAGE EDITABLE CONTENT
 ========================= */
 
@@ -204,6 +277,7 @@ async function loadHomeContent() {
         }
     }
 
+    await loadFeaturedProjects();
     await loadResearchHomeCard();
     await loadContactContent();
 }
@@ -463,9 +537,9 @@ async function loadProjectCategory(jsonPath) {
 ========================= */
 
 function initAnimations() {
-   const animatedItems = document.querySelectorAll(
-    ".hero-left, .hero-right, .hero-stats, .card, .project-card, .research-card-home, .experience-box, .research-box, .detail-project-card, .research-detail-layout"
-);
+    const animatedItems = document.querySelectorAll(
+        ".hero-left, .hero-right, .hero-stats, .card, .project-card, .research-card-home, .experience-box, .research-box, .detail-project-card, .research-detail-layout"
+    );
 
     animatedItems.forEach(item => {
         item.style.opacity = "0";
