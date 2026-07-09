@@ -118,7 +118,6 @@ async function loadContactContent() {
                 <div class="contact-details">
                     <span class="contact-label">Location</span>
                     <h4>${contact.location || ""}</h4>
-                   
                 </div>
             </div>
         `;
@@ -279,6 +278,7 @@ async function loadHomeContent() {
 
     await loadFeaturedProjects();
     await loadResearchHomeCard();
+    await loadActivitiesHome();
     await loadContactContent();
 }
 
@@ -322,6 +322,178 @@ async function loadResearchHomeCard() {
         cardButton.textContent = `${research.buttonText} →`;
         cardButton.href = "/research-project.html";
     }
+}
+
+/* =========================
+   ACHIEVEMENTS & ACTIVITIES HOME
+========================= */
+
+async function loadActivitiesHome() {
+    const data = await loadJSON("/content/activities.json");
+
+    if (!data) return;
+
+    const titleElement = document.querySelector("#activities-title");
+    const descriptionElement = document.querySelector("#activities-description");
+    const gridElement = document.querySelector("#activities-home-grid");
+    const buttonElement = document.querySelector("#activities-view-btn");
+
+    if (titleElement && data.sectionTitle) {
+        titleElement.textContent = data.sectionTitle;
+    }
+
+    if (descriptionElement && data.sectionDescription) {
+        descriptionElement.textContent = data.sectionDescription;
+    }
+
+    if (buttonElement && data.buttonText) {
+        buttonElement.textContent = `${data.buttonText} →`;
+        buttonElement.href = "/activities.html";
+    }
+
+    if (!gridElement || !Array.isArray(data.activities)) return;
+
+    gridElement.innerHTML = "";
+
+    data.activities.slice(0, 4).forEach(activity => {
+        const title = activity.title || "Activity";
+        const category = activity.category || "Activity";
+        const image = activity.coverImage || "/images/bim1.jpg";
+        const description = activity.description || "";
+
+        const card = document.createElement("a");
+        card.href = "/activities.html";
+        card.className = "activity-home-card";
+
+        card.innerHTML = `
+            <div class="activity-home-img">
+                <img src="${image}" alt="${title}">
+            </div>
+
+            <div class="activity-home-content">
+                <span>${category}</span>
+                <h3>${title}</h3>
+                <p>${description}</p>
+            </div>
+        `;
+
+        gridElement.appendChild(card);
+    });
+}
+
+/* =========================
+   ACHIEVEMENTS & ACTIVITIES PAGE
+========================= */
+
+async function loadActivitiesPage() {
+    const data = await loadJSON("/content/activities.json");
+
+    if (!data) return;
+
+    const titleElement = document.querySelector("#activities-page-title");
+    const descriptionElement = document.querySelector("#activities-page-description");
+    const gridElement = document.querySelector("#activities-detail-grid");
+
+    if (titleElement && data.sectionTitle) {
+        titleElement.textContent = data.sectionTitle;
+    }
+
+    if (descriptionElement && data.sectionDescription) {
+        descriptionElement.textContent = data.sectionDescription;
+    }
+
+    if (!gridElement || !Array.isArray(data.activities)) return;
+
+    gridElement.innerHTML = "";
+
+    data.activities.forEach(activity => {
+        const title = activity.title || "Activity";
+        const category = activity.category || "Activity";
+        const date = activity.date || "";
+        const location = activity.location || "";
+        const description = activity.description || "";
+
+        let images = [];
+
+        if (Array.isArray(activity.images) && activity.images.length > 0) {
+            images = activity.images
+                .filter(item => item && item.image)
+                .map(item => ({
+                    image: item.image,
+                    caption: item.caption || title
+                }));
+        }
+
+        if (images.length === 0 && activity.coverImage) {
+            images = [
+                {
+                    image: activity.coverImage,
+                    caption: title
+                }
+            ];
+        }
+
+        if (images.length === 0) {
+            images = [
+                {
+                    image: "/images/bim1.jpg",
+                    caption: title
+                }
+            ];
+        }
+
+        const firstImage = images[0].image;
+
+        const thumbs = images.map((item, index) => `
+            <img
+                src="${item.image}"
+                alt="${item.caption}"
+                class="activity-thumb ${index === 0 ? "active" : ""}"
+                data-src="${item.image}"
+            >
+        `).join("");
+
+        const card = document.createElement("div");
+        card.className = "activity-detail-card";
+
+        card.innerHTML = `
+            <div class="activity-gallery">
+                <img src="${firstImage}" alt="${title}" class="activity-main-img">
+
+                ${
+                    images.length > 1
+                        ? `<div class="activity-thumbs">${thumbs}</div>`
+                        : ""
+                }
+            </div>
+
+            <div class="activity-detail-content">
+                <span class="activity-category">${category}</span>
+                <h3>${title}</h3>
+
+                <div class="activity-meta">
+                    ${date ? `<p><i class="fa-regular fa-calendar"></i> ${date}</p>` : ""}
+                    ${location ? `<p><i class="fa-solid fa-location-dot"></i> ${location}</p>` : ""}
+                </div>
+
+                <p class="activity-description">${description}</p>
+            </div>
+        `;
+
+        gridElement.appendChild(card);
+
+        const mainImg = card.querySelector(".activity-main-img");
+        const thumbImgs = card.querySelectorAll(".activity-thumb");
+
+        thumbImgs.forEach(thumb => {
+            thumb.addEventListener("click", () => {
+                mainImg.src = thumb.dataset.src;
+
+                thumbImgs.forEach(t => t.classList.remove("active"));
+                thumb.classList.add("active");
+            });
+        });
+    });
 }
 
 /* =========================
@@ -398,8 +570,8 @@ async function loadResearchDetailPage() {
 
                 ${
                     images.length > 1
-                    ? `<div class="project-thumbs">${thumbs}</div>`
-                    : ""
+                        ? `<div class="project-thumbs">${thumbs}</div>`
+                        : ""
                 }
             `;
 
@@ -538,7 +710,7 @@ async function loadProjectCategory(jsonPath) {
 
 function initAnimations() {
     const animatedItems = document.querySelectorAll(
-        ".hero-left, .hero-right, .hero-stats, .card, .project-card, .research-card-home, .experience-box, .research-box, .detail-project-card, .research-detail-layout"
+        ".hero-left, .hero-right, .hero-stats, .card, .project-card, .research-card-home, .activity-home-card, .activity-detail-card, .experience-box, .research-box, .detail-project-card, .research-detail-layout"
     );
 
     animatedItems.forEach(item => {
@@ -594,6 +766,12 @@ document.addEventListener("DOMContentLoaded", async () => {
         currentPage.endsWith("/research-project")
     ) {
         await loadResearchDetailPage();
+
+    } else if (
+        currentPage.includes("activities.html") ||
+        currentPage.endsWith("/activities")
+    ) {
+        await loadActivitiesPage();
 
     } else {
         await loadHomeContent();
