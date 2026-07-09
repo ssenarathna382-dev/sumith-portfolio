@@ -17,6 +17,12 @@
       "image": "/images/bim1.jpg",
       "description": "BIM-based construction documentation including plans, elevations, sections, details, and quantity-related outputs.",
       "software": "Revit, AutoCAD"
+    },
+    {
+      "title": "Mahara ",
+      "image": "/images/uploads/image6.png",
+      "description": "ss",
+      "software": "ss"
     }
   ]
 }
