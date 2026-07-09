@@ -1,0 +1,67 @@
+{
+  "sectionTitle": "Achievements & Activities",
+  "sectionDescription": "A collection of events, competitions, workshops, academic activities, and professional engagements I have participated in.",
+  "buttonText": "View All Activities",
+  "activities": [
+    {
+      "title": "Engineering Exhibition Participation",
+      "category": "Event",
+      "date": "2026",
+      "location": "University of Ruhuna",
+      "coverImage": "/images/uploads/activity1.jpg",
+      "description": "Participated in an engineering exhibition showcasing civil engineering, BIM, CAD, and digital construction related work.",
+      "images": [
+        {
+          "image": "/images/uploads/activity1.jpg",
+          "caption": "Event photo 1"
+        },
+        {
+          "image": "/images/uploads/activity2.jpg",
+          "caption": "Event photo 2"
+        }
+      ]
+    },
+    {
+      "title": "CAD Design Competition",
+      "category": "Competition",
+      "date": "2026",
+      "location": "Sri Lanka",
+      "coverImage": "/images/uploads/activity3.jpg",
+      "description": "Participated in a CAD design competition related to engineering drawing and 3D modelling.",
+      "images": [
+        {
+          "image": "/images/uploads/activity3.jpg",
+          "caption": "Competition photo"
+        }
+      ]
+    },
+    {
+      "title": "Workshop Participation",
+      "category": "Workshop",
+      "date": "2026",
+      "location": "Sri Lanka",
+      "coverImage": "/images/uploads/activity4.jpg",
+      "description": "Participated in a technical workshop related to construction technology and digital engineering.",
+      "images": [
+        {
+          "image": "/images/uploads/activity4.jpg",
+          "caption": "Workshop photo"
+        }
+      ]
+    },
+    {
+      "title": "Academic Activity",
+      "category": "Academic",
+      "date": "2026",
+      "location": "University of Ruhuna",
+      "coverImage": "/images/uploads/activity5.jpg",
+      "description": "Participated in academic and professional development activities related to civil engineering.",
+      "images": [
+        {
+          "image": "/images/uploads/activity5.jpg",
+          "caption": "Academic activity photo"
+        }
+      ]
+    }
+  ]
+}
