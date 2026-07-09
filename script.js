@@ -22,7 +22,9 @@ function setText(selector, value) {
     }
 }
 
-/* Home page editable content */
+/* =========================
+   HOME PAGE EDITABLE CONTENT
+========================= */
 
 async function loadHomeContent() {
     const home = await loadJSON("/content/home.json");
@@ -42,6 +44,8 @@ async function loadHomeContent() {
 
         setText(".hero-description", home.description);
     }
+
+    /* About section */
 
     const about = await loadJSON("/content/about.json");
 
@@ -63,6 +67,45 @@ async function loadHomeContent() {
             });
         }
     }
+
+    /* Skills section */
+
+    const skills = await loadJSON("/content/skills.json");
+
+    if (skills && Array.isArray(skills.categories)) {
+        const skillsSection = document.querySelector("#skills");
+
+        if (skillsSection) {
+            const heading = skillsSection.querySelector("h2");
+            const cardsContainer = skillsSection.querySelector(".cards");
+
+            if (heading && skills.sectionTitle) {
+                heading.textContent = skills.sectionTitle;
+            }
+
+            if (cardsContainer) {
+                cardsContainer.innerHTML = "";
+
+                skills.categories.forEach(category => {
+                    const card = document.createElement("div");
+                    card.className = "card";
+
+                    const skillItems = Array.isArray(category.skills)
+                        ? category.skills.map(skill => `<p>${skill}</p>`).join("")
+                        : "";
+
+                    card.innerHTML = `
+                        <h3>${category.title || "Skill Category"}</h3>
+                        ${skillItems}
+                    `;
+
+                    cardsContainer.appendChild(card);
+                });
+            }
+        }
+    }
+
+    /* Contact section */
 
     const contact = await loadJSON("/content/contact.json");
 
@@ -95,7 +138,10 @@ async function loadHomeContent() {
     }
 }
 
-/* Project category pages editable content with multiple image gallery */
+/* =========================
+   PROJECT CATEGORY PAGES
+   WITH MULTIPLE IMAGE GALLERY
+========================= */
 
 async function loadProjectCategory(jsonPath) {
     const grid = document.querySelector(".detail-project-grid");
@@ -159,10 +205,10 @@ async function loadProjectCategory(jsonPath) {
 
         const thumbnails = projectImages.map((item, index) => {
             return `
-                <img 
-                    src="${item.image}" 
-                    alt="${item.caption}" 
-                    class="project-thumb ${index === 0 ? "active" : ""}" 
+                <img
+                    src="${item.image}"
+                    alt="${item.caption}"
+                    class="project-thumb ${index === 0 ? "active" : ""}"
                     data-src="${item.image}"
                 >
             `;
@@ -177,8 +223,8 @@ async function loadProjectCategory(jsonPath) {
 
                 ${
                     projectImages.length > 1
-                    ? `<div class="project-thumbs">${thumbnails}</div>`
-                    : ""
+                        ? `<div class="project-thumbs">${thumbnails}</div>`
+                        : ""
                 }
             </div>
 
@@ -207,7 +253,9 @@ async function loadProjectCategory(jsonPath) {
     });
 }
 
-/* Scroll animation */
+/* =========================
+   SCROLL ANIMATION
+========================= */
 
 function initAnimations() {
     const animatedItems = document.querySelectorAll(
@@ -237,7 +285,12 @@ function initAnimations() {
     revealItems();
 }
 
-/* Detect current page - supports both .html and Netlify pretty URLs */
+/* =========================
+   PAGE DETECTION
+   Supports:
+   /bim-projects.html
+   /bim-projects
+========================= */
 
 document.addEventListener("DOMContentLoaded", async () => {
     const currentPage = window.location.pathname.replace(/\/$/, "");
