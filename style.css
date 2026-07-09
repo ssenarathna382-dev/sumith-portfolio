@@ -1392,3 +1392,179 @@ footer {
         bottom: 15px !important;
     }
 }
+/* =========================
+   FEATURED PROJECTS CMS FIX
+   Home page project cards loaded from featured-projects.json
+========================= */
+
+#featured-projects-title {
+    text-align: center;
+}
+
+#featured-projects-grid .project-card {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+#featured-projects-grid .project-img {
+    height: 230px;
+    background: #cbd5e1;
+    overflow: hidden;
+}
+
+#featured-projects-grid .project-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Make project card height clean and balanced */
+#featured-projects-grid .project-card {
+    min-height: 100%;
+}
+
+#featured-projects-grid .project-card h3 {
+    padding: 22px 22px 10px;
+    color: #0369a1;
+    font-size: 21px;
+    line-height: 1.35;
+}
+
+#featured-projects-grid .project-card p {
+    padding: 0 22px 24px;
+    font-size: 15.5px;
+    line-height: 1.65;
+}
+
+#featured-projects-grid .view-more {
+    display: inline-block;
+    margin: 0 22px 25px;
+    color: #0d6efd;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+/* =========================
+   HERO STAT TEXT FIX
+   Digital Construction card
+========================= */
+
+.stat-content h3 {
+    line-height: 1.1;
+}
+
+.stat-content p {
+    line-height: 1.25;
+}
+
+/* =========================
+   CONTACT VISIBILITY FIX
+   Prevent contact section disappearing after refresh
+========================= */
+
+.contact-section,
+.contact-wrapper,
+.contact-intro-box,
+.contact-grid,
+.contact-card {
+    opacity: 1 !important;
+    transform: none !important;
+    visibility: visible !important;
+}
+
+.contact-section {
+    min-height: auto !important;
+    overflow: visible !important;
+}
+
+.contact-wrapper {
+    align-items: stretch !important;
+}
+
+.contact-intro-box {
+    height: 100%;
+}
+
+.contact-grid {
+    min-height: 150px;
+}
+
+/* =========================
+   MOBILE HERO PHOTO FIX
+   Move profile photo slightly down on phone
+========================= */
+
+@media (max-width: 768px) {
+    .hero-right {
+        height: 455px !important;
+        min-height: 455px !important;
+        overflow: hidden !important;
+    }
+
+    .hero-photo {
+        height: 455px !important;
+        bottom: -38px !important;
+        left: 50% !important;
+        transform: translateX(-50%) scale(1.00) !important;
+    }
+
+    .blue-circle {
+        width: 300px !important;
+        height: 300px !important;
+        bottom: 48px !important;
+    }
+
+    .circle-ring {
+        width: 380px !important;
+        height: 380px !important;
+        bottom: 18px !important;
+    }
+
+    .stat-content h3 {
+        font-size: 17px !important;
+    }
+
+    .stat-content p {
+        font-size: 11px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-right {
+        height: 430px !important;
+        min-height: 430px !important;
+    }
+
+    .hero-photo {
+        height: 430px !important;
+        bottom: -38px !important;
+    }
+
+    .blue-circle {
+        width: 280px !important;
+        height: 280px !important;
+        bottom: 45px !important;
+    }
+
+    .circle-ring {
+        width: 350px !important;
+        height: 350px !important;
+        bottom: 15px !important;
+    }
+}
+
+/* =========================
+   MOBILE PROJECT CARDS
+========================= */
+
+@media (max-width: 768px) {
+    #featured-projects-grid .project-img {
+        height: 220px;
+    }
+
+    #featured-projects-grid .project-card h3 {
+        font-size: 20px;
+    }
+}
