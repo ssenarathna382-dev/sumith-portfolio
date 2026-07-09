@@ -1,19 +1,9 @@
 {
-  "sectionTitle": "Research Project",
-  "homeTitle": "AI-Based Prediction of Pile-Induced Construction Noise",
-  "homeImage": "/images/uploads/research-cover.jpg",
-  "homeDescription": "Machine learning-based framework for predicting pile-induced construction noise using field measurements, construction activity data, soil parameters, and digital visualization.",
-  "buttonText": "View Research Details",
   "detailTitle": "AI-Based Prediction of Pile-Induced Construction Noise",
   "detailSubtitle": "Machine Learning-Based Noise Prediction and Screening Framework",
-  "detailDescription": [
-    "This research focuses on predicting construction noise generated during pile construction activities using field measurements, activity information, soil parameters, distance, elapsed time, and machine learning models.",
-    "The study aims to support construction noise assessment, environmental risk identification, buffer zone planning, and smart construction decision-making. The framework combines noise measurement, data preprocessing, machine learning model development, performance evaluation, and web-based visualization.",
-    "The final outcome supports engineers, researchers, and construction stakeholders by providing a digital tool for predicting noise levels and identifying high-noise risk zones around construction sites."
-  ],
-  "tools": "Python, Machine Learning, Flask, Google Colab, VS Code, Data Visualization",
   "researchAreas": "Construction Noise, Environmental Engineering, Artificial Intelligence, Smart Construction, Digital Twin",
-  "futureDirection": "BIM-integrated digital twin platform for construction environmental risk prediction and real-time noise management.",
+  "detailDescription": [],
+  "sectionTitle": "Research Project",
   "images": [
     {
       "image": "/images/uploads/research-cover.jpg",
@@ -23,5 +13,11 @@
       "image": "/images/uploads/research-graph.jpg",
       "caption": "Noise prediction result"
     }
-  ]
+  ],
+  "homeTitle": "Screening and Prediction of pile Induced Construction Noise",
+  "tools": "Python, Machine Learning, Flask, Google Colab, VS Code, Data Visualization",
+  "futureDirection": "BIM-integrated digital twin platform for construction environmental risk prediction and real-time noise management.",
+  "homeImage": "/images/uploads/noise-contour-lines-in-combination-with-3d-city-model.png",
+  "homeDescription": "Machine learning-based framework for predicting pile-induced construction noise using field measurements, construction activity data, soil parameters, and digital visualization.",
+  "buttonText": "View Research Details"
 }
