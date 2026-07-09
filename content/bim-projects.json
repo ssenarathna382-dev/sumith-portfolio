@@ -8,19 +8,19 @@
     },
     {
       "title": "Residential Building BIM Model",
-      "image": "/images/bim1.jpg",
+      "image": "/images/uploads/image2.png",
       "description": "Revit-based architectural and structural BIM model with drawings, sections, schedules, and 3D visualization.",
       "software": "Revit, AutoCAD, Rendering Tools"
     },
     {
       "title": "Architectural Rendering Project",
-      "image": "/images/bim1.jpg",
+      "image": "/images/uploads/image14.png",
       "description": "Exterior visualization and rendering work for building design presentation and client communication.",
       "software": "Revit, Lumion / Rendering Tools"
     },
     {
       "title": "BIM Documentation Project",
-      "image": "/images/bim1.jpg",
+      "image": "/images/uploads/image6.png",
       "description": "BIM-based construction documentation including plans, elevations, sections, details, and quantity-related outputs.",
       "software": "Revit, AutoCAD"
     }
