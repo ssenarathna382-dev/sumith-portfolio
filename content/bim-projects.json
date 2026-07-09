@@ -2,9 +2,20 @@
   "projects": [
     {
       "title": "Mahara ",
-      "image": "/images/uploads/image7.png",
+      "image": "/images/uploads/image6.png",
       "description": "ss",
-      "software": "Revit/TwinMotion"
+      "software": "Revit/TwinMotion",
+      "images": [
+        {
+          "image": "/images/uploads/image2.png"
+        },
+        {
+          "image": "/images/uploads/image6.png"
+        },
+        {
+          "image": "/images/uploads/cad1.jpg"
+        }
+      ]
     },
     {
       "title": "Residential Building BIM Model",
