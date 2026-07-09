@@ -1563,3 +1563,249 @@ footer {
         font-size: 20px;
     }
 }
+/* =========================
+   ACHIEVEMENTS & ACTIVITIES
+========================= */
+
+.activities-section {
+    background: #f1f5f9;
+    padding-top: 90px;
+    padding-bottom: 90px;
+}
+
+.activities-header {
+    text-align: center;
+    max-width: 850px;
+    margin: 0 auto 50px;
+}
+
+.activities-header h2 {
+    font-size: 42px;
+    color: #0f172a;
+    margin-bottom: 16px;
+}
+
+.activities-header p {
+    color: #475569;
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+.activities-home-grid {
+    width: 88%;
+    max-width: 1250px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.activity-home-card {
+    background: #ffffff;
+    border-radius: 18px;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    box-shadow: 0 10px 28px rgba(15, 23, 42, 0.08);
+    transition: 0.3s ease;
+}
+
+.activity-home-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 18px 40px rgba(15, 23, 42, 0.14);
+}
+
+.activity-home-img {
+    height: 190px;
+    background: #cbd5e1;
+    overflow: hidden;
+}
+
+.activity-home-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.activity-home-content {
+    padding: 22px;
+}
+
+.activity-home-content span {
+    display: inline-block;
+    color: #2563eb;
+    font-size: 13px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.activity-home-content h3 {
+    color: #0369a1;
+    font-size: 20px;
+    line-height: 1.35;
+    margin-bottom: 12px;
+}
+
+.activity-home-content p {
+    color: #334155;
+    line-height: 1.65;
+    font-size: 14.5px;
+}
+
+.activities-view-box {
+    text-align: center;
+    margin-top: 42px;
+}
+
+.activities-view-btn {
+    display: inline-block;
+    background: #0d6efd;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 14px 26px;
+    border-radius: 12px;
+    font-weight: 700;
+    transition: 0.3s ease;
+}
+
+.activities-view-btn:hover {
+    transform: translateY(-3px);
+    background: #2563eb;
+}
+
+/* Activities detail page */
+
+.activities-detail-section {
+    width: 88%;
+}
+
+.activities-detail-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 34px;
+}
+
+.activity-detail-card {
+    background: #ffffff;
+    border-radius: 20px;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 0.95fr 1.05fr;
+    box-shadow: 0 12px 32px rgba(15, 23, 42, 0.10);
+}
+
+.activity-gallery {
+    background: #ffffff;
+}
+
+.activity-main-img {
+    width: 100%;
+    height: 360px;
+    object-fit: cover;
+    display: block;
+}
+
+.activity-thumbs {
+    display: flex;
+    gap: 8px;
+    padding: 12px;
+    overflow-x: auto;
+    background: #ffffff;
+}
+
+.activity-thumb {
+    width: 70px;
+    height: 52px;
+    object-fit: cover;
+    border-radius: 7px;
+    cursor: pointer;
+    opacity: 0.7;
+    border: 2px solid transparent;
+    transition: 0.25s;
+    flex-shrink: 0;
+}
+
+.activity-thumb:hover,
+.activity-thumb.active {
+    opacity: 1;
+    border-color: #0d6efd;
+}
+
+.activity-detail-content {
+    padding: 36px;
+}
+
+.activity-category {
+    display: inline-block;
+    color: #2563eb;
+    font-weight: 800;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+}
+
+.activity-detail-content h3 {
+    color: #0f172a;
+    font-size: 30px;
+    margin-bottom: 18px;
+    line-height: 1.35;
+}
+
+.activity-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+    margin-bottom: 20px;
+    color: #475569;
+}
+
+.activity-meta p {
+    margin: 0;
+}
+
+.activity-meta i {
+    color: #0d6efd;
+    margin-right: 6px;
+}
+
+.activity-description {
+    color: #334155;
+    line-height: 1.8;
+    font-size: 16px;
+}
+
+@media (max-width: 1100px) {
+    .activities-home-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .activity-detail-card {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 700px) {
+    .activities-home-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .activities-header h2 {
+        font-size: 34px;
+    }
+
+    .activity-main-img {
+        height: 280px;
+    }
+
+    .activity-detail-content {
+        padding: 26px;
+    }
+
+    .activity-detail-content h3 {
+        font-size: 24px;
+    }
+}
