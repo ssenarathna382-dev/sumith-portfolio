@@ -453,3 +453,93 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     initAnimations();
 });
+
+function buildWhatsAppLink(phoneNumber, message) {
+    if (!phoneNumber) return "#";
+
+    const cleanNumber = phoneNumber.replace(/\D/g, "");
+    const encodedMessage = encodeURIComponent(
+        message || "Hello Sumith, I contacted you from your portfolio website."
+    );
+
+    return `https://wa.me/${cleanNumber}?text=${encodedMessage}`;
+}
+
+async function loadContactContent() {
+    const contact = await loadJSON("/content/contact.json");
+
+    if (!contact) return;
+
+    const contactGrid = document.querySelector("#contactGrid");
+    const emailBtn = document.querySelector(".email-btn");
+    const whatsappBtn = document.querySelector(".whatsapp-btn");
+
+    const whatsappLink = buildWhatsAppLink(contact.phoneNumber, contact.whatsappMessage);
+
+    if (emailBtn && contact.email) {
+        emailBtn.href = `mailto:${contact.email}`;
+    }
+
+    if (whatsappBtn && contact.phoneNumber) {
+        whatsappBtn.href = whatsappLink;
+    }
+
+    if (contactGrid) {
+        contactGrid.innerHTML = `
+            <a class="contact-card" href="mailto:${contact.email}">
+                <div class="contact-icon">
+                    <i class="fa-solid fa-envelope"></i>
+                </div>
+                <div class="contact-details">
+                    <span class="contact-label">Email</span>
+                    <h4>${contact.email}</h4>
+                    <p>Send me an email directly</p>
+                </div>
+            </a>
+
+            <a class="contact-card whatsapp-contact-card" href="${whatsappLink}" target="_blank" rel="noopener noreferrer">
+                <div class="contact-icon whatsapp-icon">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </div>
+                <div class="contact-details">
+                    <span class="contact-label">WhatsApp</span>
+                    <h4>${contact.phoneNumber}</h4>
+                    <p>Message me on WhatsApp</p>
+                </div>
+            </a>
+
+            <a class="contact-card" href="${contact.linkedinUrl}" target="_blank" rel="noopener noreferrer">
+                <div class="contact-icon">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </div>
+                <div class="contact-details">
+                    <span class="contact-label">LinkedIn</span>
+                    <h4>${contact.linkedinText}</h4>
+                    <p>View my professional profile</p>
+                </div>
+            </a>
+
+            <a class="contact-card" href="${contact.fiverrUrl}" target="_blank" rel="noopener noreferrer">
+                <div class="contact-icon">
+                    <i class="fa-solid fa-briefcase"></i>
+                </div>
+                <div class="contact-details">
+                    <span class="contact-label">Fiverr</span>
+                    <h4>${contact.fiverrText}</h4>
+                    <p>Check my freelance services</p>
+                </div>
+            </a>
+
+            <div class="contact-card location-card">
+                <div class="contact-icon">
+                    <i class="fa-solid fa-location-dot"></i>
+                </div>
+                <div class="contact-details">
+                    <span class="contact-label">Location</span>
+                    <h4>${contact.location}</h4>
+                    <p>Based in Sri Lanka</p>
+                </div>
+            </div>
+        `;
+    }
+}
