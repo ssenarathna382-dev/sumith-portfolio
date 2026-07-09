@@ -95,7 +95,7 @@ async function loadHomeContent() {
     }
 }
 
-/* Project category pages editable content */
+/* Project category pages editable content with multiple image gallery */
 
 async function loadProjectCategory(jsonPath) {
     const grid = document.querySelector(".detail-project-grid");
@@ -123,15 +123,64 @@ async function loadProjectCategory(jsonPath) {
 
     projects.forEach(project => {
         const title = project.title || "Untitled Project";
-        const image = project.image || "/images/bim1.jpg";
         const description = project.description || "";
         const software = project.software || "Not specified";
+
+        let projectImages = [];
+
+        if (Array.isArray(project.images) && project.images.length > 0) {
+            projectImages = project.images
+                .filter(item => item && item.image)
+                .map(item => ({
+                    image: item.image,
+                    caption: item.caption || title
+                }));
+        }
+
+        if (projectImages.length === 0 && project.image) {
+            projectImages = [
+                {
+                    image: project.image,
+                    caption: title
+                }
+            ];
+        }
+
+        if (projectImages.length === 0) {
+            projectImages = [
+                {
+                    image: "/images/bim1.jpg",
+                    caption: title
+                }
+            ];
+        }
+
+        const firstImage = projectImages[0].image;
+
+        const thumbnails = projectImages.map((item, index) => {
+            return `
+                <img 
+                    src="${item.image}" 
+                    alt="${item.caption}" 
+                    class="project-thumb ${index === 0 ? "active" : ""}" 
+                    data-src="${item.image}"
+                >
+            `;
+        }).join("");
 
         const card = document.createElement("div");
         card.className = "detail-project-card";
 
         card.innerHTML = `
-            <img src="${image}" alt="${title}">
+            <div class="project-gallery">
+                <img src="${firstImage}" alt="${title}" class="project-main-img">
+
+                ${
+                    projectImages.length > 1
+                    ? `<div class="project-thumbs">${thumbnails}</div>`
+                    : ""
+                }
+            </div>
 
             <div class="detail-content">
                 <h3>${title}</h3>
@@ -143,6 +192,18 @@ async function loadProjectCategory(jsonPath) {
         `;
 
         grid.appendChild(card);
+
+        const mainImg = card.querySelector(".project-main-img");
+        const thumbImgs = card.querySelectorAll(".project-thumb");
+
+        thumbImgs.forEach(thumb => {
+            thumb.addEventListener("click", () => {
+                mainImg.src = thumb.dataset.src;
+
+                thumbImgs.forEach(t => t.classList.remove("active"));
+                thumb.classList.add("active");
+            });
+        });
     });
 }
 
