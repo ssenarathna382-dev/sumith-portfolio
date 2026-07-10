@@ -5,7 +5,7 @@
       "date": "",
       "category": "",
       "location": "Faculty of Engineering, University of Ruhuna",
-      "coverImage": "/images/uploads/cad1.jpg",
+      "coverImage": "/images/uploads/img_20241002_185344.jpg",
       "images": [
         {
           "image": "/images/uploads/img_20241002_185344.jpg"
@@ -30,16 +30,14 @@
         {
           "image": "/images/uploads/whatsapp-image-2025-03-15-at-11.27.39_d33617c9.jpg"
         }
-      ]
+      ],
+      "coverImage": "/images/uploads/whatsapp-image-2025-03-15-at-11.27.39_d33617c9.jpg"
     },
     {
       "title": "Project Member – Structural Engineering Zone, RexTro 2025",
       "location": "Faculty of Engineering, University of Ruhuna",
       "description": "Participated as a project member in the Structural Engineering Zone at RexTro 2025, the Silver Jubilee Engineering Exhibition organized by the Faculty of Engineering, University of Ruhuna. My contribution focused on the shaking table project for simulating seismic behaviour in scaled structural models. This activity strengthened my practical understanding of structural dynamics, earthquake response, model testing, teamwork and technical presentation.",
       "images": [
-        {
-          "image": "/images/uploads/whatsapp-image-2026-01-12-at-12.14.38-pm.jpeg"
-        },
         {
           "image": "/images/uploads/whatsapp-image-2026-01-12-at-11.49.52-am.jpeg"
         },
@@ -52,7 +50,8 @@
         {
           "image": "/images/uploads/whatsapp-image-2026-01-12-at-12.14.38-pm.jpeg"
         }
-      ]
+      ],
+      "coverImage": "/images/uploads/whatsapp-image-2026-01-12-at-12.14.38-pm.jpeg"
     }
   ],
   "sectionTitle": "Achievements & Activities",
