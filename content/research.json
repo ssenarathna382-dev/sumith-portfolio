@@ -1,6 +1,6 @@
 {
-  "detailTitle": "AI-Based Prediction of Pile-Induced Construction Noise",
-  "detailSubtitle": "Machine Learning-Based Noise Prediction and Screening Framework",
+  "detailTitle": "Screening and Prediction of Pile Induced Construction Noise",
+  "detailSubtitle": "Machine Learning Based Noise Prediction and Screening Framework",
   "researchAreas": "Construction Noise, Environmental Engineering, Artificial Intelligence, Smart Construction, Digital Twin",
   "detailDescription": [],
   "sectionTitle": "Research Project",
@@ -16,8 +16,8 @@
   ],
   "homeTitle": "Screening and Prediction of pile Induced Construction Noise",
   "tools": "Python, Machine Learning, Flask, Google Colab, VS Code, Data Visualization",
-  "futureDirection": "BIM-integrated digital twin platform for construction environmental risk prediction and real-time noise management.",
-  "homeImage": "/images/uploads/noise-contour-lines-in-combination-with-3d-city-model.png",
-  "homeDescription": "Machine learning-based framework for predicting pile-induced construction noise using field measurements, construction activity data, soil parameters, and digital visualization.",
+  "futureDirection": "BIM integrated digital twin platform for construction environmental risk prediction and real time noise management.",
+  "homeImage": "/images/uploads/tumball.png",
+  "homeDescription": "Machine learning based framework for predicting pile induced construction noise using field measurements, construction activity data, soil parameters and digital visualization.",
   "buttonText": "View Research Details"
 }
