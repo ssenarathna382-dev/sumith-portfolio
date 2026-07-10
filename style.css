@@ -1916,3 +1916,39 @@ footer {
         font-size: 16px;
     }
 }
+/* =========================
+   PROJECT DETAIL IMAGE FIX
+   Show full CAD/Product images without cropping
+========================= */
+
+.detail-project-card .project-gallery {
+    background: #e8eef6 !important;
+}
+
+.detail-project-card .project-main-img {
+    width: 100% !important;
+    height: 330px !important;
+    object-fit: contain !important;
+    object-position: center !important;
+    background: #e8eef6 !important;
+    padding: 12px !important;
+    box-sizing: border-box !important;
+}
+
+.detail-project-card .project-thumbs {
+    background: #ffffff !important;
+}
+
+.detail-project-card .project-thumb {
+    object-fit: contain !important;
+    background: #e8eef6 !important;
+    padding: 4px !important;
+    box-sizing: border-box !important;
+}
+
+@media (max-width: 700px) {
+    .detail-project-card .project-main-img {
+        height: 270px !important;
+        padding: 10px !important;
+    }
+}
