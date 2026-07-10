@@ -1969,3 +1969,26 @@ footer {
 .detail-project-card .detail-content p strong {
     text-align: left !important;
 }
+/* =========================
+   ACTIVITIES TEXT JUSTIFY
+========================= */
+
+.activity-home-content p {
+    text-align: justify !important;
+    text-justify: inter-word !important;
+    line-height: 1.75 !important;
+}
+
+.activity-detail-content .activity-description {
+    text-align: justify !important;
+    text-justify: inter-word !important;
+    line-height: 1.8 !important;
+}
+
+/* Title and category left align keep */
+.activity-home-content h3,
+.activity-home-content span,
+.activity-detail-content h3,
+.activity-category {
+    text-align: left !important;
+}
