@@ -1952,3 +1952,20 @@ footer {
         padding: 10px !important;
     }
 }
+/* =========================
+   PROJECT DESCRIPTION JUSTIFY
+========================= */
+
+.detail-project-card .detail-content p {
+    text-align: justify !important;
+    text-justify: inter-word !important;
+    line-height: 1.8 !important;
+}
+
+.detail-project-card .detail-content h3 {
+    text-align: left !important;
+}
+
+.detail-project-card .detail-content p strong {
+    text-align: left !important;
+}
