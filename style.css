@@ -2013,12 +2013,12 @@ footer {
     line-height: 1.8 !important;
 }
 /* =========================
-   MOBILE HERO TOP SPACING FIX - MEDIUM
+   MOBILE HERO TOP SPACING FIX - FINAL
 ========================= */
 
 @media (max-width: 768px) {
     .hero {
-        padding-top: 140px !important;
+        padding-top: 148px !important;
     }
 
     .hero-container {
@@ -2040,7 +2040,7 @@ footer {
 
 @media (max-width: 480px) {
     .hero {
-        padding-top: 150px !important;
+        padding-top: 158px !important;
     }
 
     .hero-left {
