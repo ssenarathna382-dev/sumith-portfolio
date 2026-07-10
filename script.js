@@ -279,6 +279,7 @@ async function loadHomeContent() {
     await loadFeaturedProjects();
     await loadResearchHomeCard();
     await loadActivitiesHome();
+    await loadExperienceContent();
     await loadContactContent();
 }
 
@@ -493,6 +494,53 @@ async function loadActivitiesPage() {
                 thumb.classList.add("active");
             });
         });
+    });
+}
+
+/* =========================
+   PROFESSIONAL EXPERIENCE
+========================= */
+
+async function loadExperienceContent() {
+    const data = await loadJSON("/content/experience.json");
+
+    if (!data) return;
+
+    const titleElement = document.querySelector("#experience-title");
+    const listElement = document.querySelector("#experience-list");
+
+    if (titleElement && data.sectionTitle) {
+        titleElement.textContent = data.sectionTitle;
+    }
+
+    if (!listElement || !Array.isArray(data.experiences)) return;
+
+    listElement.innerHTML = "";
+
+    data.experiences.forEach(item => {
+        const title = item.title || "Experience";
+        const organization = item.organization || "";
+        const period = item.period || "";
+        const description = item.description || "";
+
+        const box = document.createElement("div");
+        box.className = "experience-box";
+
+        box.innerHTML = `
+            <h3>${title}</h3>
+
+            ${
+                organization || period
+                    ? `<p class="experience-meta">
+                        ${organization}${organization && period ? " | " : ""}${period}
+                       </p>`
+                    : ""
+            }
+
+            ${description ? `<p>${description}</p>` : ""}
+        `;
+
+        listElement.appendChild(box);
     });
 }
 
