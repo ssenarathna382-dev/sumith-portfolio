@@ -4,21 +4,21 @@
     {
       "title": "BIM Modelling & Architectural Visualization",
       "description": "Revit design, BIM modelling, architectural visualization, rendering and digital documentation projects.",
-      "image": "/images/uploads/434f1dcc-7b71-4a73-8cc1-dd609bb64c43.png",
+      "image": "/images/uploads/bim_modelling_visualization_thumbnail.jpg",
       "buttonText": "View BIM Projects",
       "buttonLink": "bim-projects.html"
     },
     {
       "title": "Structural Analysis & Design",
       "description": "Structural modelling, ETABS analysis, SAP2000 models, truss analysis and structural design projects.",
-      "image": "/images/uploads/aa4f4af6-96e4-485f-975e-78e441f80058.png",
+      "image": "/images/uploads/structural_analysis_design_thumbnail.jpg",
       "buttonText": "View Structural Projects",
       "buttonLink": "structural-projects.html"
     },
     {
       "title": "CAD Modelling, Product Design & 3D Printing",
       "description": "2D drafting, 3D CAD modelling, product design, engineering drawings and 3D printing projects.",
-      "image": "/images/uploads/7f7ae36f-e4e3-439b-9b78-8ade0cdcd9dc.png",
+      "image": "/images/uploads/cad_modelling_3d_printing_thumbnail.jpg",
       "buttonText": "View CAD Projects",
       "buttonLink": "cad-projects.html"
     }
