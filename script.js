@@ -198,6 +198,65 @@ async function loadFeaturedProjects() {
 }
 
 /* =========================
+   EDUCATION SECTION
+========================= */
+
+async function loadEducationContent() {
+    const data = await loadJSON("/content/education.json");
+
+    if (!data) return;
+
+    const titleElement = document.querySelector("#education-title");
+    const listElement = document.querySelector("#education-list");
+
+    if (titleElement && data.sectionTitle) {
+        titleElement.textContent = data.sectionTitle;
+    }
+
+    if (!listElement || !Array.isArray(data.items)) return;
+
+    listElement.innerHTML = "";
+
+    data.items.forEach(item => {
+        const degree = item.degree || "Degree / Qualification";
+        const institution = item.institution || "";
+        const period = item.period || "";
+        const description = item.description || "";
+
+        const highlights = Array.isArray(item.highlights)
+            ? item.highlights.map(highlight => `<span>${highlight}</span>`).join("")
+            : "";
+
+        const card = document.createElement("div");
+        card.className = "education-card";
+
+        card.innerHTML = `
+            <div class="education-icon">
+                <i class="fa-solid fa-graduation-cap"></i>
+            </div>
+
+            <div class="education-content">
+                <h3>${degree}</h3>
+
+                ${institution ? `<h4>${institution}</h4>` : ""}
+
+                ${period ? `<p class="education-period">${period}</p>` : ""}
+
+                ${description ? `<p>${description}</p>` : ""}
+
+                ${
+                    highlights
+                        ? `<div class="education-tags">${highlights}</div>`
+                        : ""
+                }
+            </div>
+        `;
+
+        listElement.appendChild(card);
+    });
+}
+
+/* =========================
    HOME PAGE EDITABLE CONTENT
 ========================= */
 
@@ -276,6 +335,7 @@ async function loadHomeContent() {
         }
     }
 
+    await loadEducationContent();
     await loadFeaturedProjects();
     await loadResearchHomeCard();
     await loadActivitiesHome();
@@ -758,7 +818,7 @@ async function loadProjectCategory(jsonPath) {
 
 function initAnimations() {
     const animatedItems = document.querySelectorAll(
-        ".hero-left, .hero-right, .hero-stats, .card, .project-card, .research-card-home, .activity-home-card, .activity-detail-card, .experience-box, .research-box, .detail-project-card, .research-detail-layout"
+        ".hero-left, .hero-right, .hero-stats, .card, .education-card, .project-card, .research-card-home, .activity-home-card, .activity-detail-card, .experience-box, .research-box, .detail-project-card, .research-detail-layout"
     );
 
     animatedItems.forEach(item => {
