@@ -1,0 +1,57 @@
+{
+  "sectionTitle": "Education & Qualifications",
+  "items": [
+    {
+      "degree": "B.Sc. Eng. (Hons) in Civil and Environmental Engineering",
+      "institution": "Faculty of Engineering, University of Ruhuna, Sri Lanka",
+      "period": "Expected Completion: 2026",
+      "description": "Undergraduate degree in Civil and Environmental Engineering with academic exposure to structural engineering, environmental engineering, transportation engineering, surveying, construction management, and digital construction technologies.",
+      "highlights": [
+        "Civil Engineering",
+        "Environmental Engineering",
+        "Structural Analysis",
+        "Surveying",
+        "Construction Management",
+        "Digital Construction"
+      ]
+    },
+    {
+      "degree": "G.C.E. Advanced Level - Physical Science Stream",
+      "institution": "Sri Lanka",
+      "period": "Completed",
+      "description": "Completed Advanced Level studies in the Physical Science stream, providing a strong foundation in mathematics, physics, and engineering-related analytical thinking.",
+      "highlights": [
+        "Combined Mathematics",
+        "Physics",
+        "Chemistry",
+        "Analytical Thinking"
+      ]
+    },
+    {
+      "degree": "Professional Certifications & Online Courses",
+      "institution": "Online Learning Platforms / Professional Training",
+      "period": "Ongoing",
+      "description": "Completed and continuing professional learning related to BIM, CAD design, digital construction, project management, and engineering software applications.",
+      "highlights": [
+        "BIM Modelling",
+        "CAD Design",
+        "Revit",
+        "AutoCAD",
+        "MS Project",
+        "Digital Construction"
+      ]
+    },
+    {
+      "degree": "Workshops & Training Programs",
+      "institution": "University / Professional Organizations",
+      "period": "Completed",
+      "description": "Participated in workshops and training programs related to civil engineering, construction technology, BIM workflows, and professional development.",
+      "highlights": [
+        "Technical Workshops",
+        "Construction Technology",
+        "Professional Development",
+        "Engineering Practice"
+      ]
+    }
+  ]
+}
