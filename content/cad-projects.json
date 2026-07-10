@@ -1,22 +1,55 @@
 {
   "projects": [
     {
-      "title": "3D CAD Modelling Project",
-      "image": "/images/cad1.jpg",
-      "description": "3D CAD model development for product components, mechanical parts, and client-based freelance design work.",
-      "software": "SolidWorks, Onshape, AutoCAD"
+      "title": "Boeing 757 Prototype CAD Design",
+      "image": "",
+      "description": "Developed a conceptual Boeing 757 prototype model in Onshape as a 3D CAD design project. The model includes major aircraft components such as the fuselage, wings, tail section, engines and landing gear. This project demonstrates CAD modelling, digital prototyping and design visualization skills in creating a detailed aircraft concept.",
+      "software": "Onshape",
+      "images": [
+        {
+          "image": "/images/uploads/assembly-1-3-.png"
+        },
+        {
+          "image": "/images/uploads/assembly-1-1-.png"
+        },
+        {
+          "image": "/images/uploads/assembly-1-2-.png"
+        },
+        {
+          "image": "/images/uploads/assembly-1-4-.png"
+        },
+        {
+          "image": "/images/uploads/part-studio-2.png"
+        }
+      ]
     },
     {
-      "title": "2D Engineering Drawing Project",
-      "image": "/images/cad1.jpg",
-      "description": "Technical drawing preparation including dimensions, annotations, manufacturing details, and engineering documentation.",
-      "software": "AutoCAD, SolidWorks"
+      "title": "EV Car 3D CAD Design",
+      "image": "",
+      "description": "Designed a compact electric vehicle (EV) 3D CAD model using SolidWorks. The project includes exterior body modelling, wheel design, windshield, side mirrors, front detailing and overall vehicle form development. This work demonstrates skills in automotive CAD modelling, surface/form development, product visualization and digital design presentation.",
+      "software": "SolidWorks",
+      "images": [
+        {
+          "image": "/images/uploads/6.jpg"
+        },
+        {
+          "image": "/images/uploads/5.jpg"
+        }
+      ]
     },
     {
-      "title": "3D Printing Model Development",
-      "image": "/images/cad1.jpg",
-      "description": "3D-printable model design with clean geometry, proper scale, and client-ready CAD deliverables.",
-      "software": "SolidWorks, Onshape"
+      "title": "Rover Robot CAD Model",
+      "image": "",
+      "description": "A 3D CAD model of an explorer robot rover developed in Onshape, featuring a rugged four-wheel system, articulated suspension arms, mechanical joints and a compact chassis. The design highlights my skills in robotic mechanism modelling, CAD assembly development, and concept based product design for mobile robotic applications.",
+      "software": "SolidWorks, Onshape",
+      "images": [
+        {
+          "image": "/images/uploads/2.png"
+        },
+        {
+          "image": "/images/uploads/3.png"
+        }
+      ]
     },
     {
       "title": "Car chassy",
