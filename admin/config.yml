@@ -133,6 +133,23 @@ collections:
                   - { label: "Image", name: "image", widget: "image" }
                   - { label: "Caption", name: "caption", widget: "string", required: false }
 
+      - label: "Professional Experience"
+        name: "experience"
+        file: "content/experience.json"
+        format: "json"
+        fields:
+          - { label: "Section Title", name: "sectionTitle", widget: "string" }
+
+          - label: "Experience Items"
+            name: "experiences"
+            widget: "list"
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "Job Title", name: "title", widget: "string" }
+              - { label: "Organization / Company", name: "organization", widget: "string", required: false }
+              - { label: "Period", name: "period", widget: "string", required: false }
+              - { label: "Description", name: "description", widget: "text" }
+
       - label: "Contact"
         name: "contact"
         file: "content/contact.json"
