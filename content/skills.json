@@ -1,35 +1,61 @@
 {
-  "sectionTitle": "Technical Skills",
+  "sectionTitle": "Technical Skills & Engineering Tools",
   "categories": [
     {
-      "title": "BIM & CAD",
+      "title": "BIM & Digital Construction",
       "skills": [
-        "Revit",
-        "AutoCAD",
-        "Civil 3D",
-        "3ds Max",
-        "SolidWorks",
-        "Onshape"
+        "Revit BIM Modelling",
+        "Architectural Modelling",
+        "BIM Documentation",
+        "3D Visualization",
+        "Construction Technology",
+        "Digital Construction Workflows"
       ]
     },
     {
-      "title": "Engineering & Analysis",
+      "title": "CAD, Product Design & 3D Modelling",
+      "skills": [
+        "AutoCAD 2D Drafting",
+        "Engineering Drawings",
+        "SolidWorks",
+        "Onshape",
+        "3D CAD Modelling",
+        "Product Design",
+        "3D Printing Design"
+      ]
+    },
+    {
+      "title": "Structural & Civil Engineering",
       "skills": [
         "ETABS",
         "SAP2000",
-        "Structural Analysis",
         "Structural Design",
-        "Surveying"
+        "Construction Management",
+        "Transportation Engineering"
       ]
     },
     {
-      "title": "Digital Technologies",
+      "title": "GIS, Planning & Project Tools",
       "skills": [
+        "Civil 3D",
         "ArcGIS",
         "QGIS",
-        "Machine Learning Basics",
         "MS Project",
-        "MS Office"
+        "MS Excel",
+        "MS Office",
+        "Project Documentation"
+      ]
+    },
+    {
+      "title": "Research & Digital Tools",
+      "skills": [
+        "Digital Construction Research",
+        "Data Analysis Basics",
+        "Google Colab",
+        "Python Basics",
+        "Flask Basics",
+        "Technical Report Writing",
+        "Presentation Skills"
       ]
     }
   ]
