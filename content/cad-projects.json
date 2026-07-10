@@ -70,6 +70,92 @@
           "image": "/images/uploads/solidwork_onshape_3d-modeling_3d-cad_04.png"
         }
       ]
+    },
+    {
+      "title": "Custom Electronics Suitcase Enclosure Design",
+      "software": "Solidworks",
+      "description": "Custom suitcase-style enclosure designed in SolidWorks with internal space and layout features for installing electrical circuits, batteries and related electronic components.",
+      "images": [
+        {
+          "image": "/images/uploads/i-will-do-work-on-onshape-and-solidworks-in-3d-machine-design_31.jpg"
+        },
+        {
+          "image": "/images/uploads/i-will-do-work-on-onshape-and-solidworks-in-3d-machine-design_32.jpg"
+        },
+        {
+          "image": "/images/uploads/i-will-do-work-on-onshape-and-solidworks-in-3d-machine-design_34.jpg"
+        },
+        {
+          "image": "/images/uploads/i-will-do-work-on-onshape-and-solidworks-in-3d-machine-design_38.jpg"
+        }
+      ]
+    },
+    {
+      "title": "Wind Powered EV Parking Station Design",
+      "description": "Designed a renewable-energy-based electric vehicle parking station concept with integrated wind turbines to support EV charging. The design includes a covered parking structure, multiple vehicle bays, structural supports and wind turbine units for sustainable power generation. This project demonstrates concept development, 3D CAD modelling, renewable energy integration and sustainable transportation infrastructure design.",
+      "software": "Solidworks",
+      "images": [
+        {
+          "image": "/images/uploads/do-work-on-onshape-and-solidworks-in-3d-machine-design_01.jpg"
+        }
+      ]
+    },
+    {
+      "title": "Solar Power Plant 3D CAD Design",
+      "description": "Designed a solar power plant concept using Onshape, including solar panel arrays, utility buildings, water storage/treatment units, pipe structures and supporting site elements. The project demonstrates 3D CAD modelling, renewable energy infrastructure design, site layout development and concept visualization for sustainable power generation systems.",
+      "software": "Onshape",
+      "images": [
+        {
+          "image": "/images/uploads/do-work-on-onshape-and-solidworks-in-3d-machine-design_02.png"
+        },
+        {
+          "image": "/images/uploads/i-will-do-3d-modeling-and-2d-drawin-in-solidwork-autocad-onshape_02.png"
+        },
+        {
+          "image": "/images/uploads/i-will-do-3d-modeling-and-2d-drawin-in-solidwork-autocad-onshape_03.png"
+        },
+        {
+          "image": "/images/uploads/i-will-do-3d-modeling-and-2d-drawin-in-solidwork-autocad-onshape_04.png"
+        }
+      ]
+    },
+    {
+      "title": "Water Tank and Piping System 3D CAD Design",
+      "description": "Designed a 3D CAD model of a water storage and piping system, including an elevated water tank, pipe network, valves, gauges, pump unit and supporting steel frame. The project demonstrates mechanical piping layout development, component arrangement, product visualization and practical CAD modelling skills for utility and water supply system applications.",
+      "software": "Solidworks",
+      "images": [
+        {
+          "image": "/images/uploads/i-will-do-work-on-onshape-and-solidworks-in-3d-machine-design_0.jpg"
+        },
+        {
+          "image": "/images/uploads/i-will-do-work-on-onshape-and-solidworks-in-3d-machine-design_02.jpg"
+        },
+        {}
+      ]
+    },
+    {
+      "title": "Venom Head 3D CAD Design",
+      "description": "Designed a detailed 3D CAD model of a Venom inspired character head, focusing on the distinctive facial form, large eye contours, open mouth geometry and sharp teeth detailing. This project demonstrates character-based 3D modelling skills, surface shaping and creative digital design for concept visualization.\n\n",
+      "software": "Onshape",
+      "images": [
+        {
+          "image": "/images/uploads/i-will-do-3d-modeling-and-2d-drawin-in-solidwork-autocad-onshape.png"
+        },
+        {
+          "image": "/images/uploads/i-will-do-3d-modeling-and-2d-drawin-in-solidwork-autocad-onshape_01.png"
+        }
+      ]
+    },
+    {
+      "title": "Wrist Watch 3D CAD Design",
+      "description": "Designed a detailed 3D CAD model of a wrist watch, including the watch case, dial, hour markers, hands, strap, buckle and side detailing. The project focuses on product design, accurate component modelling, surface finishing and realistic digital visualization for a wearable accessory concept.",
+      "software": "Onshape",
+      "images": [
+        {
+          "image": "/images/uploads/sas.png"
+        }
+      ],
+      "image": "/images/uploads/aaaa.png"
     }
   ]
 }
