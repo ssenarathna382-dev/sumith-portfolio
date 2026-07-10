@@ -34,6 +34,32 @@ collections:
               name: "paragraph"
               widget: "text"
 
+      - label: "Education"
+        name: "education"
+        file: "content/education.json"
+        format: "json"
+        fields:
+          - { label: "Section Title", name: "sectionTitle", widget: "string" }
+
+          - label: "Education Items"
+            name: "items"
+            widget: "list"
+            summary: "{{fields.degree}}"
+            fields:
+              - { label: "Degree / Qualification", name: "degree", widget: "string" }
+              - { label: "Institution", name: "institution", widget: "string" }
+              - { label: "Period / Status", name: "period", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+
+              - label: "Highlights"
+                name: "highlights"
+                widget: "list"
+                required: false
+                field:
+                  label: "Highlight"
+                  name: "highlight"
+                  widget: "string"
+
       - label: "Skills Section"
         name: "skills"
         file: "content/skills.json"
