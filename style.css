@@ -2013,27 +2013,26 @@ footer {
     line-height: 1.8 !important;
 }
 /* =========================
-   MOBILE HERO TOP SPACING FIX
-   Show "HELLO, I'M" properly on phone
+   MOBILE HERO TOP SPACING FIX - REDUCED
 ========================= */
 
 @media (max-width: 768px) {
     .hero {
-        padding-top: 165px !important;
+        padding-top: 125px !important;
     }
 
     .hero-container {
-        padding-top: 20px !important;
+        padding-top: 0 !important;
     }
 
     .hero-left {
-        margin-top: 20px !important;
+        margin-top: 0 !important;
     }
 
     .hello-text {
         display: block !important;
-        margin-top: 20px !important;
-        margin-bottom: 10px !important;
+        margin-top: 0 !important;
+        margin-bottom: 8px !important;
         opacity: 1 !important;
         visibility: visible !important;
     }
@@ -2041,14 +2040,14 @@ footer {
 
 @media (max-width: 480px) {
     .hero {
-        padding-top: 175px !important;
+        padding-top: 135px !important;
     }
 
     .hero-left {
-        margin-top: 25px !important;
+        margin-top: 0 !important;
     }
 
     .hello-text {
-        margin-top: 25px !important;
+        margin-top: 0 !important;
     }
 }
