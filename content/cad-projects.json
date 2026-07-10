@@ -10,9 +10,6 @@
           "image": "/images/uploads/assembly-1-3-.png"
         },
         {
-          "image": "/images/uploads/assembly-1-1-.png"
-        },
-        {
           "image": "/images/uploads/assembly-1-2-.png"
         },
         {
@@ -74,7 +71,7 @@
     {
       "title": "Custom Electronics Suitcase Enclosure Design",
       "software": "Solidworks",
-      "description": "Custom suitcase-style enclosure designed in SolidWorks with internal space and layout features for installing electrical circuits, batteries and related electronic components.",
+      "description": "Custom suitcase style enclosure designed in SolidWorks with internal space and layout features for installing electrical circuits, batteries and related electronic components.",
       "images": [
         {
           "image": "/images/uploads/i-will-do-work-on-onshape-and-solidworks-in-3d-machine-design_31.jpg"
@@ -92,7 +89,7 @@
     },
     {
       "title": "Wind Powered EV Parking Station Design",
-      "description": "Designed a renewable-energy-based electric vehicle parking station concept with integrated wind turbines to support EV charging. The design includes a covered parking structure, multiple vehicle bays, structural supports and wind turbine units for sustainable power generation. This project demonstrates concept development, 3D CAD modelling, renewable energy integration and sustainable transportation infrastructure design.",
+      "description": "Designed a renewable energy based electric vehicle parking station concept with integrated wind turbines to support EV charging. The design includes a covered parking structure, multiple vehicle bays, structural supports and wind turbine units for sustainable power generation. This project demonstrates concept development, 3D CAD modelling, renewable energy integration and sustainable transportation infrastructure design.",
       "software": "Solidworks",
       "images": [
         {
@@ -128,14 +125,16 @@
           "image": "/images/uploads/i-will-do-work-on-onshape-and-solidworks-in-3d-machine-design_0.jpg"
         },
         {
-          "image": "/images/uploads/i-will-do-work-on-onshape-and-solidworks-in-3d-machine-design_02.jpg"
+          "image": "/images/uploads/i-will-do-work-on-onshape-and-solidworks-in-3d-machine-design_01.jpg"
         },
-        {}
+        {
+          "image": "/images/uploads/i-will-do-work-on-onshape-and-solidworks-in-3d-machine-design_02.jpg"
+        }
       ]
     },
     {
       "title": "Venom Head 3D CAD Design",
-      "description": "Designed a detailed 3D CAD model of a Venom inspired character head, focusing on the distinctive facial form, large eye contours, open mouth geometry and sharp teeth detailing. This project demonstrates character-based 3D modelling skills, surface shaping and creative digital design for concept visualization.\n\n",
+      "description": "Designed a detailed 3D CAD model of a Venom inspired character head, focusing on the distinctive facial form, large eye contours, open mouth geometry and sharp teeth detailing. This project demonstrates character based 3D modelling skills, surface shaping and creative digital design for concept visualization.\n\n",
       "software": "Onshape",
       "images": [
         {
