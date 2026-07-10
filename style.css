@@ -1992,3 +1992,23 @@ footer {
 .activity-category {
     text-align: left !important;
 }
+/* =========================
+   FIX ACTIVITIES CARD TEXT SPACING
+   Do not justify narrow home cards
+========================= */
+
+.activity-home-content p {
+    text-align: left !important;
+    text-justify: auto !important;
+    word-spacing: normal !important;
+    letter-spacing: normal !important;
+    line-height: 1.75 !important;
+}
+
+/* Keep detail page justified because it has wider space */
+.activity-detail-content .activity-description {
+    text-align: justify !important;
+    text-justify: inter-word !important;
+    word-spacing: normal !important;
+    line-height: 1.8 !important;
+}
