@@ -1,39 +1,38 @@
 {
   "projects": [
     {
-      "title": "Mahara ",
-      "image": "/images/uploads/image6.png",
-      "description": "ss",
-      "software": "Revit/TwinMotion",
+      "title": "Municipal Council Building, Mahara",
+      "description": "Designed the Municipal Council Building, Mahara, as a BIM based architectural and structural design project using Autodesk Revit. The model includes building layout development, architectural elements, structural design considerations and coordinated digital modelling. Twinmotion was used to produce realistic visualizations and presentation renders, demonstrating BIM modelling, design coordination, and architectural visualization skills.",
+      "software": "Autodesk Revit, Twinmotion",
       "images": [
-        {
-          "image": "/images/uploads/image2.png"
-        },
         {
           "image": "/images/uploads/image6.png"
         },
         {
-          "image": "/images/uploads/cad1.jpg"
+          "image": "/images/uploads/image7.png"
+        },
+        {
+          "image": "/images/uploads/slide1.jpg"
+        },
+        {
+          "image": "/images/uploads/slide2.jpg"
+        },
+        {
+          "image": "/images/uploads/image1.png"
+        },
+        {
+          "image": "/images/uploads/image2.png"
+        },
+        {
+          "image": "/images/uploads/image5.png"
+        },
+        {
+          "image": "/images/uploads/image11.png"
+        },
+        {
+          "image": "/images/uploads/image12.png"
         }
       ]
-    },
-    {
-      "title": "Residential Building BIM Model",
-      "image": "/images/uploads/image2.png",
-      "description": "Revit-based architectural and structural BIM model with drawings, sections, schedules, and 3D visualization.",
-      "software": "Revit, AutoCAD, Rendering Tools"
-    },
-    {
-      "title": "Architectural Rendering Project",
-      "image": "/images/uploads/image14.png",
-      "description": "Exterior visualization and rendering work for building design presentation and client communication.",
-      "software": "Revit, Lumion / Rendering Tools"
-    },
-    {
-      "title": "BIM Documentation Project",
-      "image": "/images/uploads/image6.png",
-      "description": "BIM-based construction documentation including plans, elevations, sections, details, and quantity-related outputs.",
-      "software": "Revit, AutoCAD"
     }
   ]
 }
