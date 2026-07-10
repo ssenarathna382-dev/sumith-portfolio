@@ -41,7 +41,7 @@
       "title": "Rover Robot CAD Model",
       "image": "",
       "description": "A 3D CAD model of an explorer robot rover developed in Onshape, featuring a rugged four-wheel system, articulated suspension arms, mechanical joints and a compact chassis. The design highlights my skills in robotic mechanism modelling, CAD assembly development, and concept based product design for mobile robotic applications.",
-      "software": "SolidWorks, Onshape",
+      "software": "Onshape",
       "images": [
         {
           "image": "/images/uploads/2.png"
@@ -52,10 +52,24 @@
       ]
     },
     {
-      "title": "Car chassy",
-      "image": "/images/uploads/11.png",
-      "description": "aaaaaaaaaaaaa",
-      "software": "Onshape"
+      "title": "Modern Lamp Set Design",
+      "image": "",
+      "description": "3D CAD design of a modern lamp set created in Onshape, featuring a cylindrical lamp body and mounting base for decorative and functional lighting applications.",
+      "software": "Onshape",
+      "images": [
+        {
+          "image": "/images/uploads/solidwork_onshape_3d-modeling_3d-cad_01.png"
+        },
+        {
+          "image": "/images/uploads/solidwork_onshape_3d-modeling_3d-cad_02.png"
+        },
+        {
+          "image": "/images/uploads/solidwork_onshape_3d-modeling_3d-cad_03.png"
+        },
+        {
+          "image": "/images/uploads/solidwork_onshape_3d-modeling_3d-cad_04.png"
+        }
+      ]
     }
   ]
 }
