@@ -1,6 +1,27 @@
 {
   "activities": [
     {
+      "title": "Industry Session with China Harbour Engineering Company",
+      "category": "Industry Session",
+      "location": "Department of Civil and Environmental Engineering, University of Ruhuna",
+      "description": "Participated in an industry session by China Harbour Engineering Company (CHEC), gaining exposure to professional engineering practice, career development and infrastructure project opportunities.",
+      "coverImage": "/images/uploads/whatsapp-image-2026-07-11-at-7.33.20-am-3-.jpeg",
+      "images": [
+        {
+          "image": "/images/uploads/whatsapp-image-2026-07-11-at-7.33.20-am-3-.jpeg"
+        },
+        {
+          "image": "/images/uploads/whatsapp-image-2026-07-11-at-7.33.20-am.jpeg"
+        },
+        {
+          "image": "/images/uploads/whatsapp-image-2026-07-11-at-7.33.20-am-2-.jpeg"
+        },
+        {
+          "image": "/images/uploads/whatsapp-image-2026-07-11-at-7.33.20-am.jpeg"
+        }
+      ]
+    },
+    {
       "title": "Project Member – Structural Engineering Zone, RexTro 2025",
       "location": "Faculty of Engineering, University of Ruhuna",
       "description": "Participated as a project member in the Structural Engineering Zone at RexTro 2025, the Silver Jubilee Engineering Exhibition organized by the Faculty of Engineering, University of Ruhuna. My contribution focused on the shaking table project for simulating seismic behaviour in scaled structural models. This activity strengthened my practical understanding of structural dynamics, earthquake response, model testing, teamwork and technical presentation.",
@@ -53,27 +74,6 @@
         }
       ],
       "coverImage": "/images/uploads/437099410_860789336061389_8048550427929216490_n.jpg"
-    },
-    {
-      "title": "Industry Session with China Harbour Engineering Company",
-      "category": "Industry Session",
-      "location": "Department of Civil and Environmental Engineering, University of Ruhuna",
-      "description": "Participated in an industry session by China Harbour Engineering Company (CHEC), gaining exposure to professional engineering practice, career development and infrastructure project opportunities.",
-      "coverImage": "/images/uploads/whatsapp-image-2026-07-11-at-7.33.20-am-3-.jpeg",
-      "images": [
-        {
-          "image": "/images/uploads/whatsapp-image-2026-07-11-at-7.33.20-am-3-.jpeg"
-        },
-        {
-          "image": "/images/uploads/whatsapp-image-2026-07-11-at-7.33.20-am.jpeg"
-        },
-        {
-          "image": "/images/uploads/whatsapp-image-2026-07-11-at-7.33.20-am-2-.jpeg"
-        },
-        {
-          "image": "/images/uploads/whatsapp-image-2026-07-11-at-7.33.20-am.jpeg"
-        }
-      ]
     },
     {
       "title": "Career Catalyst 2024",
