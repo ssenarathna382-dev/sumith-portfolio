@@ -33,6 +33,12 @@
           "image": "/images/uploads/image12.png"
         }
       ]
+    },
+    {
+      "title": "CESL Office Complex",
+      "image": "/images/uploads/434f1dcc-7b71-4a73-8cc1-dd609bb64c43.png",
+      "software": "Revit",
+      "description": "ECSL Office Complex"
     }
   ]
 }
